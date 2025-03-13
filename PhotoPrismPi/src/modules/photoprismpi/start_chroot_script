@@ -1,0 +1,122 @@
+#!/usr/bin/env bash
+# PhotoPrismPi module: Sets up PhotoPrism with Caddy reverse proxy, configures storage directories and system services
+# Places the compose.yaml to run photoprisim
+# Written by <Author>
+# GPL V3
+########
+
+# Source error handling, leave this in place
+set -x
+set -e
+
+source /common.sh
+install_cleanup_trap
+
+# Create storage folders
+mkdir -p /opt/photoprism/database /opt/photoprism/storage /opt/photoprism/originals /opt/photoprism/import
+chown -R 1000:1000 /home/ubuntu /opt/photoprism
+
+# Install Caddy using the official method
+echo "Installing Caddy..."
+apt-get install -y debian-keyring debian-archive-keyring apt-transport-https curl
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | tee /etc/apt/sources.list.d/caddy-stable.list
+apt-get update
+apt-get install -y caddy
+
+# Configure Caddy directories and permissions
+mkdir -p /etc/caddy
+mkdir -p /var/lib/caddy
+mkdir -p /var/log/caddy
+mkdir -p /var/www
+chown -R root:root /etc/caddy /var/lib/caddy /var/log/caddy /var/www
+chmod 755 /etc/caddy /var/lib/caddy /var/log/caddy /var/www
+
+# Copy Caddyfile
+cp /filesystem/etc/caddy/Caddyfile /etc/caddy/Caddyfile
+chmod 644 /etc/caddy/Caddyfile
+
+# Allow Caddy to bind to privileged ports
+setcap CAP_NET_BIND_SERVICE=+eip $(which caddy)
+
+# Install additional required packages
+apt-get install -y avahi-daemon
+
+# Enable Docker service
+systemctl enable docker.service
+systemctl enable containerd.service
+
+# External drives
+mkdir -p /mnt/a /mnt/b /mnt/c /mnt/d
+chown -R 1000:1000 /mnt
+echo "/dev/sda1  /mnt/a  auto  nofail,noatime,noauto,x-systemd.automount,x-systemd.device-timeout=1ms,uid=1000,gid=1000  0  0" | tee -a /etc/fstab
+echo "/dev/sdb1  /mnt/b  auto  nofail,noatime,noauto,x-systemd.automount,x-systemd.device-timeout=1ms,uid=1000,gid=1000  0  0" | tee -a /etc/fstab
+echo "/dev/sdc1  /mnt/c  auto  nofail,noatime,noauto,x-systemd.automount,x-systemd.device-timeout=1ms,uid=1000,gid=1000  0  0" | tee -a /etc/fstab
+echo "/dev/sdd1  /mnt/d  auto  nofail,noatime,noauto,x-systemd.automount,x-systemd.device-timeout=1ms,uid=1000,gid=1000  0  0" | tee -a /etc/fstab
+
+# Unpack filesystem
+unpack /filesystem/root / || echo "WARNING: Could not unpack filesystem/root"
+unpack /filesystem/home/ubuntu /home/ubuntu || echo "WARNING: Could not unpack filesystem/home/ubuntu"
+
+# Create systemd service for PhotoPrism
+cat > /etc/systemd/system/photoprism.service << 'EOL'
+[Unit]
+Description=PhotoPrism Service
+After=docker.service network-online.target
+Requires=docker.service network-online.target
+StartLimitIntervalSec=500
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/photoprism
+Restart=on-failure
+RestartSec=30
+TimeoutStartSec=180
+
+# Ensure docker is running and pull images before starting
+ExecStartPre=/bin/bash -c 'until docker info > /dev/null 2>&1; do sleep 1; done'
+ExecStartPre=/usr/bin/docker compose pull --quiet
+ExecStartPre=/usr/bin/docker compose down --remove-orphans
+ExecStart=/usr/bin/docker compose up
+ExecStop=/usr/bin/docker compose down
+
+[Install]
+WantedBy=multi-user.target
+EOL
+
+# Configure Caddy service
+cat > /etc/systemd/system/caddy.service << 'EOL'
+[Unit]
+Description=Caddy web server
+Documentation=https://caddyserver.com/docs/
+After=network.target network-online.target
+Requires=network-online.target
+
+[Service]
+Type=notify
+User=root
+Group=root
+ExecStart=/usr/bin/caddy run --config /etc/caddy/Caddyfile
+ExecReload=/usr/bin/caddy reload --config /etc/caddy/Caddyfile
+TimeoutStopSec=5s
+LimitNOFILE=1048576
+LimitNPROC=512
+PrivateDevices=yes
+PrivateTmp=true
+ProtectSystem=full
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+
+[Install]
+WantedBy=multi-user.target
+EOL
+
+# Enable services
+systemctl enable photoprism.service
+systemctl enable caddy.service
+
+#cleanup
+apt-get clean
+apt-get autoremove -y

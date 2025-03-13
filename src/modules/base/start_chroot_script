@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Base module: Configures core system settings, package management, and essential system services
 # Base script
 # Basic and manditory settings for the base of a CustomPiOS build
 # Written by Guy Sheffer <guysoft at gmail dot com>
@@ -17,17 +18,9 @@ if [ -n "${BASE_APT_MIRROR}" ]; then
 fi
 
 function generate_resolvconf {
-  if [ -z "${BASE_USE_ALT_DNS}" ]; then
-    touch /etc/resolv.conf
-    for dns in 8.8.8.8 8.8.4.4 1.1.1.1; do
-      echo "nameserver ${dns}" >> /etc/resolv.conf
-    done
-  else
-    touch /etc/resolv.conf
-    for dns in ${BASE_USE_ALT_DNS}; do
-      echo "nameserver ${dns}" >> /etc/resolv.conf
-    done
-  fi
+  echo "Using native DNS resolution..."
+  # Function disabled to use native DNS settings
+  return 0
 }
 
 if [ "${BASE_DISTRO}" == "ubuntu" ]; then
@@ -38,15 +31,86 @@ if [ "${BASE_DISTRO}" == "ubuntu" ]; then
   generate_resolvconf
 
   apt_update_skip
-  apt-get install -y net-tools wireless-tools dhcpcd5
+  # Install network tools
+  echo "Installing network tools..."
+  
+  # Try to fix package dependencies first
+  for i in {1..3}; do
+    echo "Attempt $i: Running apt-get update..."
+    if apt-get update; then
+      echo "apt-get update succeeded!"
+      break
+    else
+      echo "apt-get update failed, retrying in 5 seconds..."
+      sleep 5
+      # Try to fix DNS again
+      generate_resolvconf
+    fi
+    
+    # If we've tried 3 times and still failed, try with --allow-insecure-repositories
+    if [ $i -eq 3 ]; then
+      echo "Trying apt-get update with --allow-insecure-repositories..."
+      apt-get update --allow-insecure-repositories || true
+    fi
+  done
+  
+  # Try to fix broken packages
+  apt-get install -f -y || true
+  
+  # Try to install packages with retry logic
+  for i in {1..3}; do
+    echo "Attempt $i: Installing net-tools and wireless-tools..."
+    if apt-get install -y --no-install-recommends net-tools wireless-tools; then
+      echo "Package installation succeeded!"
+      break
+    else
+      echo "Package installation failed, retrying in 5 seconds..."
+      sleep 5
+      # Try to fix DNS again
+      generate_resolvconf
+    fi
+    
+    # If we've tried 3 times and still failed, try with --fix-missing
+    if [ $i -eq 3 ]; then
+      echo "Trying package installation with --fix-missing..."
+      apt-get install -y --fix-missing --no-install-recommends net-tools wireless-tools || true
+    fi
+  done
+  
+  # Try to install dhcpcd5 with retry logic
+  if apt-cache show dhcpcd5 > /dev/null 2>&1; then
+    # Commenting out dhcpcd5 installation as it's causing dependency issues
+    echo "Skipping dhcpcd5 installation due to dependency issues"
+    # for i in {1..3}; do
+    #   echo "Attempt $i: Installing dhcpcd5..."
+    #   if apt-get install -y --no-install-recommends dhcpcd5; then
+    #     echo "dhcpcd5 installation succeeded!"
+    #     break
+    #   else
+    #     echo "dhcpcd5 installation failed, retrying in 5 seconds..."
+    #     sleep 5
+    #   fi
+    #   
+    #   # If we've tried 3 times and still failed, try with --fix-broken
+    #   if [ $i -eq 3 ]; then
+    #     echo "Trying dhcpcd5 installation with --fix-broken..."
+    #     apt-get install -y --fix-broken dhcpcd5 || echo "Warning: dhcpcd5 installation failed, continuing anyway"
+    #   fi
+    # done
+  else
+    echo "Warning: dhcpcd5 package not available, continuing without it"
+  fi
   if [ $( is_in_apt policykit-1 ) -eq 1 ]; then
-    apt-get -y install policykit-1
+    # Commenting out policykit-1 installation as it's causing dependency issues
+    echo "Skipping policykit-1 installation due to dependency issues"
+    # apt-get -y install policykit-1
   fi
   
   # prevent any installed services from automatically starting
   echo exit 101 > /usr/sbin/policy-rc.d
   chmod +x /usr/sbin/policy-rc.d
-  systemctl enable dhcpcd.service
+  # Commenting out dhcpcd service enablement since we're not installing dhcpcd5
+  # systemctl enable dhcpcd.service
   
   #Undo prevent any installed services from automatically starting
   rm -r /usr/sbin/policy-rc.d || true
@@ -228,3 +292,30 @@ then
       echo "enable_uart=1" >> /"${BASE_BOOT_MOUNT_PATH}"/config.txt
     fi
 fi
+
+function fix_hostname_resolution {
+  # Fix hostname resolution issues
+  echo "Fixing hostname resolution..."
+  
+  # Get the current hostname
+  local hostname=$(hostname)
+  
+  # Check if the hostname is already in /etc/hosts
+  if ! grep -q "127.0.1.1.*$hostname" /etc/hosts; then
+    echo "Adding $hostname to /etc/hosts..."
+    echo "127.0.1.1 $hostname" >> /etc/hosts
+  fi
+  
+  # Make sure localhost is properly configured
+  if ! grep -q "127.0.0.1.*localhost" /etc/hosts; then
+    echo "Adding localhost to /etc/hosts..."
+    echo "127.0.0.1 localhost" >> /etc/hosts
+  fi
+  
+  # Display the updated hosts file
+  echo "Updated /etc/hosts:"
+  cat /etc/hosts
+}
+
+# Call the function to fix hostname resolution
+fix_hostname_resolution

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Network
+# Network module: Configures WiFi, network interfaces, and provides network setup capabilities through boot configuration
 # Adds to /boot configuration files that let you set up wifi network before booting
 # Written by Guy Sheffer <guysoft at gmail dot com> and Gina Häußge <gina@octoprint.org>
 # GPL V3

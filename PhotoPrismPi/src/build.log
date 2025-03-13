@@ -1,0 +1,2521 @@
+++++ realpath -s /home/omer/Documents/CustomPiOS/src/build
++++ dirname /home/omer/Documents/CustomPiOS/src/build
+++ BUILD_SCRIPT_PATH=/home/omer/Documents/CustomPiOS/src
++++ mktemp
+++ export EXTRA_BOARD_CONFIG=/tmp/tmp.6TkTJO0j1H
+++ EXTRA_BOARD_CONFIG=/tmp/tmp.6TkTJO0j1H
+++ /home/omer/Documents/CustomPiOS/src/custompios_core/generate_board_config.py /tmp/tmp.6TkTJO0j1H
+++ echo 'Temp source file: /tmp/tmp.6TkTJO0j1H'
+Temp source file: /tmp/tmp.6TkTJO0j1H
+++ source /home/omer/Documents/CustomPiOS/src/common.sh
+++ install_cleanup_trap
+++ set -e
+++ trap cleanup SIGINT SIGTERM
+++++ realpath -s /home/omer/Documents/CustomPiOS/src/build
++++ dirname /home/omer/Documents/CustomPiOS/src/build
+++ CUSTOM_OS_PATH=/home/omer/Documents/CustomPiOS/src
+++ source /home/omer/Documents/CustomPiOS/src/config '' /tmp/tmp.6TkTJO0j1H
++++++ realpath -s /home/omer/Documents/CustomPiOS/src/config
+++++ dirname /home/omer/Documents/CustomPiOS/src/config
++++ CONFIG_DIR=/home/omer/Documents/CustomPiOS/src
++++ source /home/omer/Documents/CustomPiOS/src/common.sh
++++ WORKSPACE_POSTFIX=
++++ export BUILD_VARIANT=
++++ BUILD_VARIANT=
++++ BUILD_VARIANT=
++++ : default
++++ EXTRA_BAORD_CONFIG=/tmp/tmp.6TkTJO0j1H
++++ export BUILD_FLAVOR=
++++ BUILD_FLAVOR=
++++ : default
++++ echo -e '--> Building VARIANT default, FLAVOR default'
+--> Building VARIANT default, FLAVOR default
++++ '[' -f /home/omer/Documents/CustomPiOS/src/config.local ']'
++++ source /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/config
+++++ export DIST_NAME=PhotoPrismPi
+++++ DIST_NAME=PhotoPrismPi
+++++ export DIST_VERSION=0.1.0
+++++ DIST_VERSION=0.1.0
+++++ export RPI_IMAGER_NAME=PhotoPrismPi
+++++ RPI_IMAGER_NAME=PhotoPrismPi
+++++ export 'RPI_IMAGER_DESCRIPTION=PhotoPrism for Raspberry Pi 5 with Ubuntu 24.04'
+++++ RPI_IMAGER_DESCRIPTION='PhotoPrism for Raspberry Pi 5 with Ubuntu 24.04'
+++++ export RPI_IMAGER_WEBSITE=https://github.com/photoprism/photoprism
+++++ RPI_IMAGER_WEBSITE=https://github.com/photoprism/photoprism
+++++ export RPI_IMAGER_ICON=https://raw.githubusercontent.com/guysoft/CustomPiOS/devel/media/rpi-imager-CustomPiOS.png
+++++ RPI_IMAGER_ICON=https://raw.githubusercontent.com/guysoft/CustomPiOS/devel/media/rpi-imager-CustomPiOS.png
+++++ export BASE_DISTRO=ubuntu
+++++ BASE_DISTRO=ubuntu
+++++ export BASE_ARCH=arm64
+++++ BASE_ARCH=arm64
+++++ export BASE_BOARD=raspberrypiarm64
+++++ BASE_BOARD=raspberrypiarm64
+++++ export BASE_IMAGE_PATH=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image
+++++ BASE_IMAGE_PATH=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image
+++++ export BASE_ZIP_IMG=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img.xz
+++++ BASE_ZIP_IMG=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img.xz
+++++ export BASE_IMAGE_RASPBIAN=no
+++++ BASE_IMAGE_RASPBIAN=no
+++++ export BASE_USER=ubuntu
+++++ BASE_USER=ubuntu
+++++ export BASE_USER_PASSWORD=ubuntu
+++++ BASE_USER_PASSWORD=ubuntu
+++++ export BASE_BOOT_MOUNT_PATH=boot
+++++ BASE_BOOT_MOUNT_PATH=boot
+++++ export 'MODULES=base(network,docker,photoprismpi)'
+++++ MODULES='base(network,docker,photoprismpi)'
++++ '[' default '!=' default ']'
++++ echo Import the variant config if we have one
+Import the variant config if we have one
++++ '[' -n '' ']'
++++ '[' -n '' ']'
++++ '[' -f /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/config.local ']'
++++ TMP='base,network,docker,photoprismpi)'
++++ TMP='base,network,docker,photoprismpi)'
++++ MODULES_LIST=base,network,docker,photoprismpi,
++++ '[' -n '' ']'
++++ BASE_WORKSPACE=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace
++++ '[' -n '' ']'
++++ BASE_MOUNT_PATH=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount
++++ '[' -f /tmp/tmp.6TkTJO0j1H ']'
++++ source /tmp/tmp.6TkTJO0j1H
+++++ export BASE_ARCH=arm64
+++++ BASE_ARCH=arm64
++++ export REMOTE_AND_META_CONFIG=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/remote_and_meta_config
++++ REMOTE_AND_META_CONFIG=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/remote_and_meta_config
++++ '[' -f /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/remote_and_meta_config ']'
++++ source /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/remote_and_meta_config
++++ load_module_config base,network,docker,photoprismpi,
++++ MODULES_AFTER=base,network,docker,photoprismpi,
+++++ echo base,network,docker,photoprismpi,
+++++ tr , '\n'
++++ for module in $(echo "${MODULES_AFTER}" | tr "," "\n")
++++ '[' -d /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/base ']'
++++ '[' -d /home/omer/Documents/CustomPiOS/src/modules/base ']'
++++ export MODULE_PATH=/home/omer/Documents/CustomPiOS/src/modules/base
++++ MODULE_PATH=/home/omer/Documents/CustomPiOS/src/modules/base
++++ echo 'loading base config at /home/omer/Documents/CustomPiOS/src/modules/base/config'
+loading base config at /home/omer/Documents/CustomPiOS/src/modules/base/config
++++ '[' -f /home/omer/Documents/CustomPiOS/src/modules/base/config ']'
++++ source /home/omer/Documents/CustomPiOS/src/modules/base/config
+++++ BASE_VERSION=2.0.0
+++++ '[' -n '' ']'
+++++ BASE_PRESCRIPT=
+++++ '[' -n '' ']'
+++++ BASE_POSTSCRIPT=
+++++ '[' -n raspberrypiarm64 ']'
+++++ '[' -n '' ']'
+++++ BASE_OS=debian_bookworm
+++++ echo 'GOT BASE BOARD raspberrypiarm64'
+GOT BASE BOARD raspberrypiarm64
+++++ '[' raspberrypiarm64 == raspberrypiarmhf ']'
+++++ '[' -n /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image ']'
++++++ ls -t '/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image/*.zip' '/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image/*.7z' /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img.xz
++++++ head -n 1
+ls: cannot access '/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image/*.zip': No such file or directory
+ls: cannot access '/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image/*.7z': No such file or directory
+++++ BASE_ZIP_IMG=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img.xz
+++++ '[' -n no ']'
+++++ '[' -n ubuntu ']'
+++++ '[' ubuntu = ubuntu ']'
+++++ '[' -n /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img.xz ']'
+++++ '[' -n ubuntu ']'
+++++ '[' -n '' ']'
+++++ BASE_ADD_USER=yes
+++++ '[' -n ubuntu ']'
+++++ '[' -n '' ']'
+++++ BASE_RELEASE_COMPRESS=yes
+++++ '[' -n '' ']'
+++++ BASE_RELEASE_IMG_NAME=default
+++++ '[' -n '' ']'
+++++ BASE_RELEASE_ZIP_NAME=default
+++++ '[' -n /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace ']'
+++++ '[' -n /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount ']'
+++++ '[' -n boot ']'
+++++ '[' -n '' ']'
+++++ BASE_ROOT_PARTITION=2
+++++ '[' -n '' ']'
+++++ BASE_IMAGE_ENLARGEROOT=200
+++++ '[' -n '' ']'
+++++ BASE_IMAGE_RESIZEROOT=200
+++++ '[' -n '' ']'
+++++ BASE_APT_CACHE=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/aptcache
+++++ '[' -n '' ']'
+++++ BASE_APT_PROXY=
+++++ '[' -n '' ']'
+++++ BASE_APT_MIRROR=
+++++ '[' -n '' ']'
+++++ BASE_PYPI_INDEX=
+++++ '[' -n '' ']'
+++++ BASE_OVERRIDE_HOSTNAME=photoprismpi
+++++ '[' -n '' ']'
+++++ BASE_USE_ALT_DNS=
+++++ '[' -n '' ']'
+++++ BASE_BUILD_REPO_MIRROR=
+++++ '[' -n '' ']'
+++++ BASE_SSH_ENABLE=yes
+++++ '[' -n '' ']'
++++++ git -C /home/omer/Documents/CustomPiOS/src rev-parse HEAD
+++++ BASE_COMMIT=693157e02bd3ce201bcdafa4371ba6e38badb52b
+++++ '[' -n '' ']'
+++++ BASE_CONFIG_MEMSPLIT=default
+++++ '[' -n '' ']'
+++++ BASE_CONFIG_TIMEZONE=default
+++++ '[' -n '' ']'
+++++ BASE_CONFIG_LOCALE=default
+++++ '[' -n '' ']'
+++++ BASE_CONFIG_KEYBOARD=default
+++++ '[' -n arm64 ']'
+++++ '[' -n '' ']'
+++++ BASE_IGNORE_VARIANT_NAME=no
+++++ '[' -n '' ']'
+++++ BASE_ENABLE_UART=no
+++++ : yes
++++ echo ================================================================
+================================================================
++++ echo 'Using the following config:'
+Using the following config:
++++ module_up=BASE
++++ module_up=BASE_
++++ IFS=
+++++ compgen -A variable BASE_
++++ read -r var
++++ export BASE_ADD_USER
++++ echo BASE_ADD_USER
+BASE_ADD_USER
++++ IFS=
++++ read -r var
++++ export BASE_APT_CACHE
++++ echo BASE_APT_CACHE
+BASE_APT_CACHE
++++ IFS=
++++ read -r var
++++ export BASE_APT_CLEAN
++++ echo BASE_APT_CLEAN
+BASE_APT_CLEAN
++++ IFS=
++++ read -r var
++++ export BASE_APT_MIRROR
++++ echo BASE_APT_MIRROR
+BASE_APT_MIRROR
++++ IFS=
++++ read -r var
++++ export BASE_APT_PROXY
++++ echo BASE_APT_PROXY
+BASE_APT_PROXY
++++ IFS=
++++ read -r var
++++ export BASE_ARCH
++++ echo BASE_ARCH
+BASE_ARCH
++++ IFS=
++++ read -r var
++++ export BASE_BOARD
++++ echo BASE_BOARD
+BASE_BOARD
++++ IFS=
++++ read -r var
++++ export BASE_BOOT_MOUNT_PATH
++++ echo BASE_BOOT_MOUNT_PATH
+BASE_BOOT_MOUNT_PATH
++++ IFS=
++++ read -r var
++++ export BASE_BUILD_REPO_MIRROR
++++ echo BASE_BUILD_REPO_MIRROR
+BASE_BUILD_REPO_MIRROR
++++ IFS=
++++ read -r var
++++ export BASE_COMMIT
++++ echo BASE_COMMIT
+BASE_COMMIT
++++ IFS=
++++ read -r var
++++ export BASE_CONFIG_KEYBOARD
++++ echo BASE_CONFIG_KEYBOARD
+BASE_CONFIG_KEYBOARD
++++ IFS=
++++ read -r var
++++ export BASE_CONFIG_LOCALE
++++ echo BASE_CONFIG_LOCALE
+BASE_CONFIG_LOCALE
++++ IFS=
++++ read -r var
++++ export BASE_CONFIG_MEMSPLIT
++++ echo BASE_CONFIG_MEMSPLIT
+BASE_CONFIG_MEMSPLIT
++++ IFS=
++++ read -r var
++++ export BASE_CONFIG_TIMEZONE
++++ echo BASE_CONFIG_TIMEZONE
+BASE_CONFIG_TIMEZONE
++++ IFS=
++++ read -r var
++++ export BASE_DISTRO
++++ echo BASE_DISTRO
+BASE_DISTRO
++++ IFS=
++++ read -r var
++++ export BASE_ENABLE_UART
++++ echo BASE_ENABLE_UART
+BASE_ENABLE_UART
++++ IFS=
++++ read -r var
++++ export BASE_IGNORE_VARIANT_NAME
++++ echo BASE_IGNORE_VARIANT_NAME
+BASE_IGNORE_VARIANT_NAME
++++ IFS=
++++ read -r var
++++ export BASE_IMAGE_ENLARGEROOT
++++ echo BASE_IMAGE_ENLARGEROOT
+BASE_IMAGE_ENLARGEROOT
++++ IFS=
++++ read -r var
++++ export BASE_IMAGE_PATH
++++ echo BASE_IMAGE_PATH
+BASE_IMAGE_PATH
++++ IFS=
++++ read -r var
++++ export BASE_IMAGE_RASPBIAN
++++ echo BASE_IMAGE_RASPBIAN
+BASE_IMAGE_RASPBIAN
++++ IFS=
++++ read -r var
++++ export BASE_IMAGE_RESIZEROOT
++++ echo BASE_IMAGE_RESIZEROOT
+BASE_IMAGE_RESIZEROOT
++++ IFS=
++++ read -r var
++++ export BASE_MOUNT_PATH
++++ echo BASE_MOUNT_PATH
+BASE_MOUNT_PATH
++++ IFS=
++++ read -r var
++++ export BASE_OS
++++ echo BASE_OS
+BASE_OS
++++ IFS=
++++ read -r var
++++ export BASE_OVERRIDE_HOSTNAME
++++ echo BASE_OVERRIDE_HOSTNAME
+BASE_OVERRIDE_HOSTNAME
++++ IFS=
++++ read -r var
++++ export BASE_POSTSCRIPT
++++ echo BASE_POSTSCRIPT
+BASE_POSTSCRIPT
++++ IFS=
++++ read -r var
++++ export BASE_PRESCRIPT
++++ echo BASE_PRESCRIPT
+BASE_PRESCRIPT
++++ IFS=
++++ read -r var
++++ export BASE_PYPI_INDEX
++++ echo BASE_PYPI_INDEX
+BASE_PYPI_INDEX
++++ IFS=
++++ read -r var
++++ export BASE_RELEASE_COMPRESS
++++ echo BASE_RELEASE_COMPRESS
+BASE_RELEASE_COMPRESS
++++ IFS=
++++ read -r var
++++ export BASE_RELEASE_IMG_NAME
++++ echo BASE_RELEASE_IMG_NAME
+BASE_RELEASE_IMG_NAME
++++ IFS=
++++ read -r var
++++ export BASE_RELEASE_ZIP_NAME
++++ echo BASE_RELEASE_ZIP_NAME
+BASE_RELEASE_ZIP_NAME
++++ IFS=
++++ read -r var
++++ export BASE_ROOT_PARTITION
++++ echo BASE_ROOT_PARTITION
+BASE_ROOT_PARTITION
++++ IFS=
++++ read -r var
++++ export BASE_SSH_ENABLE
++++ echo BASE_SSH_ENABLE
+BASE_SSH_ENABLE
++++ IFS=
++++ read -r var
++++ export BASE_USER
++++ echo BASE_USER
+BASE_USER
++++ IFS=
++++ read -r var
++++ export BASE_USER_PASSWORD
++++ echo BASE_USER_PASSWORD
+BASE_USER_PASSWORD
++++ IFS=
++++ read -r var
++++ export BASE_USE_ALT_DNS
++++ echo BASE_USE_ALT_DNS
+BASE_USE_ALT_DNS
++++ IFS=
++++ read -r var
++++ export BASE_VERSION
++++ echo BASE_VERSION
+BASE_VERSION
++++ IFS=
++++ read -r var
++++ export BASE_WORKSPACE
++++ echo BASE_WORKSPACE
+BASE_WORKSPACE
++++ IFS=
++++ read -r var
++++ export BASE_ZIP_IMG
++++ echo BASE_ZIP_IMG
+BASE_ZIP_IMG
++++ IFS=
++++ read -r var
++++ echo ================================================================
+================================================================
++++ for module in $(echo "${MODULES_AFTER}" | tr "," "\n")
++++ '[' -d /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/network ']'
++++ '[' -d /home/omer/Documents/CustomPiOS/src/modules/network ']'
++++ export MODULE_PATH=/home/omer/Documents/CustomPiOS/src/modules/network
++++ MODULE_PATH=/home/omer/Documents/CustomPiOS/src/modules/network
++++ echo 'loading network config at /home/omer/Documents/CustomPiOS/src/modules/network/config'
+loading network config at /home/omer/Documents/CustomPiOS/src/modules/network/config
++++ '[' -f /home/omer/Documents/CustomPiOS/src/modules/network/config ']'
++++ source /home/omer/Documents/CustomPiOS/src/modules/network/config
+++++ '[' -n '' ']'
+++++ NETWORK_DISABLE_PWRSAVE=yes
+++++ '[' -n '' ']'
+++++ NETWORK_PWRSAVE_TYPE=udev
+++++ '[' -n '' ']'
+++++ NETWORK_WPA_SUPPLICANT=no
+++++ '[' -n '' ']'
+++++ NETWORK_NETWORK_MANAGER=yes
++++ echo ================================================================
+================================================================
++++ echo 'Using the following config:'
+Using the following config:
++++ module_up=NETWORK
++++ module_up=NETWORK_
++++ IFS=
+++++ compgen -A variable NETWORK_
++++ read -r var
++++ export NETWORK_DISABLE_PWRSAVE
++++ echo NETWORK_DISABLE_PWRSAVE
+NETWORK_DISABLE_PWRSAVE
++++ IFS=
++++ read -r var
++++ export NETWORK_NETWORK_MANAGER
++++ echo NETWORK_NETWORK_MANAGER
+NETWORK_NETWORK_MANAGER
++++ IFS=
++++ read -r var
++++ export NETWORK_PWRSAVE_TYPE
++++ echo NETWORK_PWRSAVE_TYPE
+NETWORK_PWRSAVE_TYPE
++++ IFS=
++++ read -r var
++++ export NETWORK_WPA_SUPPLICANT
++++ echo NETWORK_WPA_SUPPLICANT
+NETWORK_WPA_SUPPLICANT
++++ IFS=
++++ read -r var
++++ echo ================================================================
+================================================================
++++ for module in $(echo "${MODULES_AFTER}" | tr "," "\n")
++++ '[' -d /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/docker ']'
++++ '[' -d /home/omer/Documents/CustomPiOS/src/modules/docker ']'
++++ export MODULE_PATH=/home/omer/Documents/CustomPiOS/src/modules/docker
++++ MODULE_PATH=/home/omer/Documents/CustomPiOS/src/modules/docker
++++ echo 'loading docker config at /home/omer/Documents/CustomPiOS/src/modules/docker/config'
+loading docker config at /home/omer/Documents/CustomPiOS/src/modules/docker/config
++++ '[' -f /home/omer/Documents/CustomPiOS/src/modules/docker/config ']'
++++ source /home/omer/Documents/CustomPiOS/src/modules/docker/config
+++++ '[' -n '' ']'
+++++ DOCKER_COMPOSE=yes
+++++ '[' -n '' ']'
+++++ DOCKER_ADD_USER_TO_GROUP=no
+++++ '[' -n '' ']'
+++++ DOCKER_COMPOSE_BOOT=yes
+++++ '[' -n '' ']'
+++++ DOCKER_COMPOSE_BOOT_PATH=default
++++ echo ================================================================
+================================================================
++++ echo 'Using the following config:'
+Using the following config:
++++ module_up=DOCKER
++++ module_up=DOCKER_
++++ IFS=
++++ read -r var
+++++ compgen -A variable DOCKER_
++++ export DOCKER_ADD_USER_TO_GROUP
++++ echo DOCKER_ADD_USER_TO_GROUP
+DOCKER_ADD_USER_TO_GROUP
++++ IFS=
++++ read -r var
++++ export DOCKER_COMPOSE
++++ echo DOCKER_COMPOSE
+DOCKER_COMPOSE
++++ IFS=
++++ read -r var
++++ export DOCKER_COMPOSE_BOOT
++++ echo DOCKER_COMPOSE_BOOT
+DOCKER_COMPOSE_BOOT
++++ IFS=
++++ read -r var
++++ export DOCKER_COMPOSE_BOOT_PATH
++++ echo DOCKER_COMPOSE_BOOT_PATH
+DOCKER_COMPOSE_BOOT_PATH
++++ IFS=
++++ read -r var
++++ echo ================================================================
+================================================================
++++ for module in $(echo "${MODULES_AFTER}" | tr "," "\n")
++++ '[' -d /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi ']'
++++ export MODULE_PATH=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi
++++ MODULE_PATH=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi
++++ echo 'loading photoprismpi config at /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/config'
+loading photoprismpi config at /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/config
++++ '[' -f /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/config ']'
++++ source /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/config
+++++ PHOTOPRISMPI_VAR='PhotoPrism for Raspberry Pi 5'
+++++ PHOTOPRISMPI_VERSION=0.1.0
+++++ PHOTOPRISMPI_PORT=2342
+++++ PHOTOPRISMPI_ADMIN_USER=admin
+++++ PHOTOPRISMPI_ADMIN_PASSWORD=photoprism
++++ echo ================================================================
+================================================================
++++ echo 'Using the following config:'
+Using the following config:
++++ module_up=PHOTOPRISMPI
++++ module_up=PHOTOPRISMPI_
++++ IFS=
++++ read -r var
+++++ compgen -A variable PHOTOPRISMPI_
++++ export PHOTOPRISMPI_ADMIN_PASSWORD
++++ echo PHOTOPRISMPI_ADMIN_PASSWORD
+PHOTOPRISMPI_ADMIN_PASSWORD
++++ IFS=
++++ read -r var
++++ export PHOTOPRISMPI_ADMIN_USER
++++ echo PHOTOPRISMPI_ADMIN_USER
+PHOTOPRISMPI_ADMIN_USER
++++ IFS=
++++ read -r var
++++ export PHOTOPRISMPI_PORT
++++ echo PHOTOPRISMPI_PORT
+PHOTOPRISMPI_PORT
++++ IFS=
++++ read -r var
++++ export PHOTOPRISMPI_VAR
++++ echo PHOTOPRISMPI_VAR
+PHOTOPRISMPI_VAR
++++ IFS=
++++ read -r var
++++ export PHOTOPRISMPI_VERSION
++++ echo PHOTOPRISMPI_VERSION
+PHOTOPRISMPI_VERSION
++++ IFS=
++++ read -r var
++++ echo ================================================================
+================================================================
+++ /home/omer/Documents/CustomPiOS/src/config_sanity
+++ '[' '' == yes ']'
+++ source /home/omer/Documents/CustomPiOS/src/custompios
++++ set -e
++++ export LC_ALL=C
++++ LC_ALL=C
++++ source /home/omer/Documents/CustomPiOS/src/common.sh
+++++ date
++++ echo_green -e '\nBUILD STARTED @ Mon Mar 10 21:42:24 CET 2025!\n'
++++ echo -e -n '\e[92m'
+[92m+++ echo -e '\nBUILD' STARTED @ Mon Mar 10 21:42:24 CET '2025!\n'
+
+BUILD STARTED @ Mon Mar 10 21:42:24 CET 2025!
+
++++ echo -e -n '\e[0m'
+[0m+++ '[' -n 200 ']'
++++ which sfdisk
++++ mkdir -p /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace
++++ mkdir -p /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount
++++ '[' -f /tmp/tmp.6TkTJO0j1H ']'
++++ mv -v /tmp/tmp.6TkTJO0j1H /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/extra_board_config
+renamed '/tmp/tmp.6TkTJO0j1H' -> '/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/extra_board_config'
++++ rm -rf '/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/*.tar.gz'
++++ install_cleanup_trap
++++ set -e
++++ trap cleanup SIGINT SIGTERM
++++ install_fail_on_error_trap
++++ set -e
++++ trap 'echo_red "build failed, unmounting image..." && cd $DIST_PATH && ( unmount_image $BASE_MOUNT_PATH force || true ) && echo_red -e "\nBUILD FAILED!\n"' ERR
++++ unmount_image /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount force
++++ mount_path=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount
++++ force=
++++ '[' 2 -gt 1 ']'
++++ force=force
++++ sync
++++ '[' -n force ']'
+++++ sudo lsof -t /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount
+sudo: unable to resolve host thinkmore: Name or service not known
+++++ sudo mount
+++++ grep /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount
+++++ awk -F ' on ' '{print $2}'
+++++ awk '{print $1}'
+++++ sort -r
+sudo: unable to resolve host thinkmore: Name or service not known
++++ pushd /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace
+/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace /home/omer/Documents/CustomPiOS/PhotoPrismPi/src
++++ '[' -e ubuntu-24.04.2-preinstalled-server-arm64+raspi.img ']'
++++ rm ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ '[' '!' -f /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img.xz ']'
++++ '[' /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img.xz == '' ']'
++++ [[ /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img.xz =~ \.img$ ]]
++++ 7za x -aoa /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img.xz
+
+7-Zip (a) 23.01 (x64) : Copyright (c) 1999-2023 Igor Pavlov : 2023-06-20
+ 64-bit locale=C.UTF-8 Threads:8 OPEN_MAX:1024
+
+Scanning the drive for archives:
+1 file, 1199156080 bytes (1144 MiB)
+
+Extracting archive: /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img.xz
+--
+Path = /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img.xz
+Type = xz
+Physical Size = 1199156080
+Method = LZMA2:18 CRC64
+Streams = 1
+Blocks = 3765
+Cluster Size = 1048576
+Characteristics = BlockPackSize BlockUnpackSize
+
+Everything is Ok
+
+Size:       3946981888
+Compressed: 1199156080
+++++ ls
+++++ grep '.img$\|.raw$'
+++++ head -n 1
++++ BASE_IMG_PATH=ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ '[' '!' -f ubuntu-24.04.2-preinstalled-server-arm64+raspi.img ']'
+++++ basename ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ export CUSTOM_PI_OS_BUILDBASE=ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ CUSTOM_PI_OS_BUILDBASE=ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ '[' -n 200 ']'
++++ enlarge_ext ubuntu-24.04.2-preinstalled-server-arm64+raspi.img 2 200
++++ image=ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ partition=2
++++ size=200
++++ echo_green 'Adding 200 MB to partition 2 of ubuntu-24.04.2-preinstalled-server-arm64+raspi.img'
++++ echo -e -n '\e[92m'
+[92m+++ echo Adding 200 MB to partition 2 of ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
+Adding 200 MB to partition 2 of ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ echo -e -n '\e[0m'
+[0m++++ sfdisk --json ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
+++++ jq '.partitiontable.partitions[] | select(.node ==  "ubuntu-24.04.2-preinstalled-server-arm64+raspi.img2").start'
++++ start=1050624
++++ offset=537919488
++++ dd if=/dev/zero bs=1M count=200
+200+0 records in
+200+0 records out
+209715200 bytes (210 MB, 200 MiB) copied, 0.263872 s, 795 MB/s
++++ fdisk ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
+
+Welcome to fdisk (util-linux 2.39.3).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+Command (m for help): Disk ubuntu-24.04.2-preinstalled-server-arm64+raspi.img: 3.87 GiB, 4156697088 bytes, 8118549 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xfac95764
+
+Device                                              Boot   Start     End Sectors  Size Id Type
+ubuntu-24.04.2-preinstalled-server-arm64+raspi.img1 *       2048 1050623 1048576  512M  c W95 FAT32 (LBA)
+ubuntu-24.04.2-preinstalled-server-arm64+raspi.img2      1050624 7708947 6658324  3.2G 83 Linux
+
+Command (m for help): Partition number (1,2, default 2): 
+Partition 2 has been deleted.
+
+Command (m for help): Partition type
+   p   primary (1 primary, 0 extended, 3 free)
+   e   extended (container for logical partitions)
+Select (default p): Partition number (2-4, default 2): First sector (1050624-8118548, default 1050624): Last sector, +/-sectors or +/-size{K,M,G,T,P} (1050624-8118548, default 8118548): 
+Created a new partition 2 of type 'Linux' and of size 3.4 GiB.
+Partition #2 contains a ext4 signature.
+
+Command (m for help): 
+Disk ubuntu-24.04.2-preinstalled-server-arm64+raspi.img: 3.87 GiB, 4156697088 bytes, 8118549 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xfac95764
+
+Device                                              Boot   Start     End Sectors  Size Id Type
+ubuntu-24.04.2-preinstalled-server-arm64+raspi.img1 *       2048 1050623 1048576  512M  c W95 FAT32 (LBA)
+ubuntu-24.04.2-preinstalled-server-arm64+raspi.img2      1050624 8118548 7067925  3.4G 83 Linux
+
+Command (m for help): The partition table has been altered.
+Syncing disks.
+
++++ detach_all_loopback ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ image_name=ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
+++++ losetup
+++++ awk '{ print $1 }'
+++++ grep ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ for img in $(losetup | grep $1 | awk '{ print $1 }')
+++++ printf %s /dev/loop19
+++++ sed s/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img//g
++++ '[' /dev/loop19 '!=' /dev/loop19 ']'
++++ for img in $(losetup | grep $1 | awk '{ print $1 }')
+++++ sed s/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img//g
+++++ printf %s /dev/loop21
++++ '[' /dev/loop21 '!=' /dev/loop21 ']'
++++ for img in $(losetup | grep $1 | awk '{ print $1 }')
+++++ sed s/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img//g
+++++ printf %s /dev/loop18
++++ '[' /dev/loop18 '!=' /dev/loop18 ']'
++++ for img in $(losetup | grep $1 | awk '{ print $1 }')
+++++ printf %s /dev/loop20
+++++ sed s/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img//g
++++ '[' /dev/loop20 '!=' /dev/loop20 ']'
++++ test_for_image ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ '[' '!' -f ubuntu-24.04.2-preinstalled-server-arm64+raspi.img ']'
+++++ losetup -f --show -o 537919488 ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ LODEV=/dev/loop22
++++ trap 'losetup -d $LODEV' EXIT
++++ file -Ls /dev/loop22
++++ grep -qi ext
++++ e2fsck -fy /dev/loop22
+e2fsck 1.47.0 (5-Feb-2023)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 3A: Optimizing directories
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+
+writable: ***** FILE SYSTEM WAS MODIFIED *****
+writable: 60628/208416 files (0.1% non-contiguous), 564635/832290 blocks
++++ resize2fs -p /dev/loop22
+resize2fs 1.47.0 (5-Feb-2023)
+Resizing the filesystem on /dev/loop22 to 883490 (4k) blocks.
+The filesystem on /dev/loop22 is now 883490 (4k) blocks long.
+
++++ losetup -d /dev/loop22
++++ trap - EXIT
++++ echo_green 'Resized partition 2 of ubuntu-24.04.2-preinstalled-server-arm64+raspi.img to +200 MB'
++++ echo -e -n '\e[92m'
+[92m+++ echo Resized partition 2 of ubuntu-24.04.2-preinstalled-server-arm64+raspi.img to +200 MB
+Resized partition 2 of ubuntu-24.04.2-preinstalled-server-arm64+raspi.img to +200 MB
++++ echo -e -n '\e[0m'
+[0m+++ mount_image ubuntu-24.04.2-preinstalled-server-arm64+raspi.img 2 /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount boot ''
++++ image_path=ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ root_partition=2
++++ mount_path=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount
++++ boot_mount_path=boot
++++ '[' 5 -gt 3 ']'
++++ boot_mount_path=boot
++++ '[' 5 -gt 4 ']'
++++ '[' '' '!=' '' ']'
++++ boot_partition=1
+++++ sfdisk --json ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ fdisk_output='{
+   "partitiontable": {
+      "label": "dos",
+      "id": "0xfac95764",
+      "device": "ubuntu-24.04.2-preinstalled-server-arm64+raspi.img",
+      "unit": "sectors",
+      "sectorsize": 512,
+      "partitions": [
+         {
+            "node": "ubuntu-24.04.2-preinstalled-server-arm64+raspi.img1",
+            "start": 2048,
+            "size": 1048576,
+            "type": "c",
+            "bootable": true
+         },{
+            "node": "ubuntu-24.04.2-preinstalled-server-arm64+raspi.img2",
+            "start": 1050624,
+            "size": 7067925,
+            "type": "83"
+         }
+      ]
+   }
+}'
+++++ jq '.partitiontable.partitions[] | select(.node == "ubuntu-24.04.2-preinstalled-server-arm64+raspi.img1").start'
++++ boot_offset=1048576
+++++ jq '.partitiontable.partitions[] | select(.node == "ubuntu-24.04.2-preinstalled-server-arm64+raspi.img2").start'
++++ root_offset=537919488
++++ echo_green 'Mounting image ubuntu-24.04.2-preinstalled-server-arm64+raspi.img on /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount, offset for boot partition is 1048576, offset for root partition is 537919488'
++++ echo -e -n '\e[92m'
+[92m+++ echo Mounting image ubuntu-24.04.2-preinstalled-server-arm64+raspi.img on /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount, offset for boot partition is 1048576, offset for root partition is 537919488
+Mounting image ubuntu-24.04.2-preinstalled-server-arm64+raspi.img on /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount, offset for boot partition is 1048576, offset for root partition is 537919488
++++ echo -e -n '\e[0m'
+[0m+++ detach_all_loopback ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ image_name=ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
+++++ losetup
+++++ grep ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
+++++ awk '{ print $1 }'
++++ for img in $(losetup | grep $1 | awk '{ print $1 }')
+++++ printf %s /dev/loop19
+++++ sed s/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img//g
++++ '[' /dev/loop19 '!=' /dev/loop19 ']'
++++ for img in $(losetup | grep $1 | awk '{ print $1 }')
+++++ sed s/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img//g
+++++ printf %s /dev/loop21
++++ '[' /dev/loop21 '!=' /dev/loop21 ']'
++++ for img in $(losetup | grep $1 | awk '{ print $1 }')
+++++ printf %s /dev/loop18
+++++ sed s/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img//g
++++ '[' /dev/loop18 '!=' /dev/loop18 ']'
++++ for img in $(losetup | grep $1 | awk '{ print $1 }')
+++++ printf %s /dev/loop20
+++++ sed s/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img//g
++++ '[' /dev/loop20 '!=' /dev/loop20 ']'
++++ echo_green 'Mounting root partition'
++++ echo -e -n '\e[92m'
+[92m+++ echo Mounting root partition
+Mounting root partition
++++ echo -e -n '\e[0m'
+[0m+++ sudo losetup -f
+sudo: unable to resolve host thinkmore: Name or service not known
+/dev/loop22
++++ sudo mount -o loop,offset=537919488 ubuntu-24.04.2-preinstalled-server-arm64+raspi.img /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/
+sudo: unable to resolve host thinkmore: Name or service not known
++++ [[ 1 != \2 ]]
++++ echo_green 'Mounting boot partition'
++++ echo -e -n '\e[92m'
+[92m+++ echo Mounting boot partition
+Mounting boot partition
++++ echo -e -n '\e[0m'
+[0m+++ sudo losetup -f
+sudo: unable to resolve host thinkmore: Name or service not known
+/dev/loop23
+++++ expr 537919488 - 1048576
++++ sudo mount -o loop,offset=1048576,sizelimit=536870912 ubuntu-24.04.2-preinstalled-server-arm64+raspi.img /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/boot
+sudo: unable to resolve host thinkmore: Name or service not known
++++ sudo mkdir -p /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/dev/pts
+sudo: unable to resolve host thinkmore: Name or service not known
++++ sudo mkdir -p /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/proc
+sudo: unable to resolve host thinkmore: Name or service not known
++++ sudo mkdir -p /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/sys
+sudo: unable to resolve host thinkmore: Name or service not known
++++ sudo mount -o bind /dev /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/dev
+sudo: unable to resolve host thinkmore: Name or service not known
++++ sudo mount -o bind /dev/pts /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/dev/pts
+sudo: unable to resolve host thinkmore: Name or service not known
++++ sudo mount -o bind,ro /proc /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/proc
+sudo: unable to resolve host thinkmore: Name or service not known
++++ sudo mount -o bind,ro /sys /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/sys
+sudo: unable to resolve host thinkmore: Name or service not known
++++ '[' -n /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/aptcache ']'
++++ '[' /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/aptcache '!=' no ']'
++++ mkdir -p /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/aptcache
++++ mount --bind /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/aptcache /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/var/cache/apt
++++ pushd /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount
+/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace /home/omer/Documents/CustomPiOS/PhotoPrismPi/src
++++ '[' no == yes ']'
++++ '[' -n '' ']'
++++ '[' -n '' ']'
++++ CHROOT_SCRIPT=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/chroot_script
++++ MODULES_AFTER_PATH=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/modules_after
++++ MODULES_BEFORE='base(network,docker,photoprismpi)'
++++ /home/omer/Documents/CustomPiOS/src/custompios_core/execution_order.py 'base(network,docker,photoprismpi)' /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/chroot_script /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/modules_after /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/remote_and_meta_config
+Running: /home/omer/Documents/CustomPiOS/src/modules/base/meta
+ENV: raspberrypiarm64
+Adding in modules: 
+Running: /home/omer/Documents/CustomPiOS/src/modules/network/meta
+ENV: raspberrypiarm64
+Adding in modules: 
+Running: /home/omer/Documents/CustomPiOS/src/modules/network/meta
+ENV: raspberrypiarm64
+Adding in modules: 
+Running: /home/omer/Documents/CustomPiOS/src/modules/base/meta
+ENV: raspberrypiarm64
+Adding in modules: 
+WARNING: No file at - /home/omer/Documents/CustomPiOS/src/modules/network/end_chroot_script
+WARNING: No file at - /home/omer/Documents/CustomPiOS/src/modules/docker/end_chroot_script
++++ '[' -f /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/remote_and_meta_config ']'
++++ echo 'Sourcing remote and submodules config'
+Sourcing remote and submodules config
++++ source /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/remote_and_meta_config
+++++ cat /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/modules_after
++++ MODULES_AFTER=
++++ load_module_config ''
++++ MODULES_AFTER=
+++++ echo ''
+++++ tr , '\n'
++++ echo
+
++++ export -f chroot_correct_qemu
++++ export -f execute_chroot_script
++++ bash -x /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/chroot_script
++ set -x
++ set -e
++ execute_chroot_script /home/omer/Documents/CustomPiOS/src/modules/base /home/omer/Documents/CustomPiOS/src/modules/base/start_chroot_script
++ '[' -f /.dockerenv ']'
++ '[' -d /home/omer/Documents/CustomPiOS/src/modules/base/filesystem ']'
++ cp -vr --preserve=mode,timestamps /home/omer/Documents/CustomPiOS/src/modules/base/filesystem .
+'/home/omer/Documents/CustomPiOS/src/modules/base/filesystem' -> './filesystem'
+'/home/omer/Documents/CustomPiOS/src/modules/base/filesystem/ubuntu' -> './filesystem/ubuntu'
+'/home/omer/Documents/CustomPiOS/src/modules/base/filesystem/ubuntu/usr' -> './filesystem/ubuntu/usr'
+'/home/omer/Documents/CustomPiOS/src/modules/base/filesystem/ubuntu/usr/lib' -> './filesystem/ubuntu/usr/lib'
+'/home/omer/Documents/CustomPiOS/src/modules/base/filesystem/ubuntu/usr/lib/dhcpcd' -> './filesystem/ubuntu/usr/lib/dhcpcd'
+'/home/omer/Documents/CustomPiOS/src/modules/base/filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks' -> './filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks'
+'/home/omer/Documents/CustomPiOS/src/modules/base/filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant' -> './filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant'
+++ uname -m
++ '[' x86_64 '!=' armv7l ']'
++ '[' arm64 == armv7l ']'
++ '[' arm64 == armhf ']'
++ '[' arm64 == aarch64 ']'
++ '[' arm64 == arm64 ']'
++ grep -q gentoo /etc/os-release
+++ which qemu-aarch64-static
++ cp /usr/bin/qemu-aarch64-static usr/bin/qemu-aarch64-static
++ cp /home/omer/Documents/CustomPiOS/src/modules/base/start_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /home/omer/Documents/CustomPiOS/src/common.sh common.sh
++ chmod 755 common.sh
+++ uname -m
++ chroot_correct_qemu x86_64 arm64 /home/omer/Documents/CustomPiOS/src/modules/base/start_chroot_script /home/omer/Documents/CustomPiOS/src
++ local host_arch=x86_64
++ local target_arch=arm64
++ local chroot_script=/home/omer/Documents/CustomPiOS/src/modules/base/start_chroot_script
++ local custom_pi_os_path=/home/omer/Documents/CustomPiOS/src
++ [[ -z x86_64 ]]
++ [[ -z arm64 ]]
++ cp /home/omer/Documents/CustomPiOS/src/modules/base/start_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /home/omer/Documents/CustomPiOS/src/common.sh common.sh
++ chmod 755 common.sh
++ [[ x86_64 != \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\h\f ]]
++ [[ arm64 == \a\a\r\c\h\6\4 ]]
++ [[ arm64 == \a\r\m\6\4 ]]
++ grep -q gentoo /etc/os-release
+++ which qemu-aarch64-static
++ cp /usr/bin/qemu-aarch64-static usr/bin/qemu-aarch64-static
++ [[ x86_64 != \a\r\m\v\7\l ]]
++ [[ x86_64 != \a\a\r\c\h\6\4 ]]
++ [[ x86_64 != \a\r\m\6\4 ]]
++ echo 'Detected we are on a non-arm device'
+Detected we are on a non-arm device
++ [[ arm64 == \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\h\f ]]
++ [[ arm64 == \a\a\r\c\h\6\4 ]]
++ [[ arm64 == \a\r\m\6\4 ]]
++ echo 'Building on non-ARM device a aarch64/arm64 system, using qemu-aarch64-static'
+Building on non-ARM device a aarch64/arm64 system, using qemu-aarch64-static
++ grep -q gentoo /etc/os-release
++ chroot . usr/bin/qemu-aarch64-static /bin/bash /chroot_script
++ set -e
++ export LC_ALL=C
++ LC_ALL=C
++ source /common.sh
++ install_cleanup_trap
++ set -e
++ trap cleanup SIGINT SIGTERM
++ '[' -n '' ']'
++ '[' ubuntu == ubuntu ']'
++ unpack /filesystem/ubuntu / root
++ from=/filesystem/ubuntu
++ to=/
++ owner=
++ '[' 3 -gt 2 ']'
++ owner=root
++ mkdir -p /tmp/unpack/
++ cp -v -r --preserve=mode,timestamps /filesystem/ubuntu/. /tmp/unpack/
+'/filesystem/ubuntu/./usr' -> '/tmp/unpack/./usr'
+'/filesystem/ubuntu/./usr/lib' -> '/tmp/unpack/./usr/lib'
+'/filesystem/ubuntu/./usr/lib/dhcpcd' -> '/tmp/unpack/./usr/lib/dhcpcd'
+'/filesystem/ubuntu/./usr/lib/dhcpcd/dhcpcd-hooks' -> '/tmp/unpack/./usr/lib/dhcpcd/dhcpcd-hooks'
+'/filesystem/ubuntu/./usr/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant' -> '/tmp/unpack/./usr/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant'
++ '[' -n root ']'
++ chown -hR root:root /tmp/unpack/
++ cp -v -r --preserve=mode,ownership,timestamps /tmp/unpack/. /
+'/tmp/unpack/./usr/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant' -> '/./usr/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant'
++ rm -r /tmp/unpack
++ mv /etc/resolv.conf /etc/resolv.conf.orig
++ generate_resolvconf
++ echo 'Using native DNS resolution...'
+Using native DNS resolution...
++ return 0
++ apt_update_skip
++ '[' -f /var/cache/apt/pkgcache.bin ']'
+++ date +%s
+++ stat -c %Y /var/cache/apt/pkgcache.bin
++ '[' 1906 -lt 3600 ']'
++ echo_green 'APT Cache needs no update! [SKIPPED]'
++ echo -e -n '\e[92m'
+[92m+ echo APT Cache needs no 'update!' '[SKIPPED]'
+APT Cache needs no update! [SKIPPED]
++ echo -e -n '\e[0m'
+[0m+ echo 'Installing network tools...'
+Installing network tools...
++ for i in {1..3}
++ echo 'Attempt 1: Running apt-get update...'
+Attempt 1: Running apt-get update...
++ apt-get update
+Hit:1 http://ports.ubuntu.com/ubuntu-ports noble InRelease
+Get:2 http://ports.ubuntu.com/ubuntu-ports noble-security InRelease [126 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 Components [460 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 c-n-f Metadata [30.0 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports noble/restricted arm64 c-n-f Metadata [412 B]
+Get:6 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 Components [3573 kB]
+Get:7 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 c-n-f Metadata [295 kB]
+Get:8 http://ports.ubuntu.com/ubuntu-ports noble/multiverse arm64 Components [31.6 kB]
+Get:9 http://ports.ubuntu.com/ubuntu-ports noble/multiverse arm64 c-n-f Metadata [7152 B]
+Get:10 http://ports.ubuntu.com/ubuntu-ports noble-security/main arm64 Packages [663 kB]
+Get:11 http://ports.ubuntu.com/ubuntu-ports noble-security/main Translation-en [128 kB]
+Get:12 http://ports.ubuntu.com/ubuntu-ports noble-security/main arm64 Components [5692 B]
+Get:13 http://ports.ubuntu.com/ubuntu-ports noble-security/main arm64 c-n-f Metadata [5636 B]
+Get:14 http://ports.ubuntu.com/ubuntu-ports noble-security/restricted arm64 Packages [828 kB]
+Get:15 http://ports.ubuntu.com/ubuntu-ports noble-security/restricted Translation-en [143 kB]
+Get:16 http://ports.ubuntu.com/ubuntu-ports noble-security/restricted arm64 Components [212 B]
+Get:17 http://ports.ubuntu.com/ubuntu-ports noble-security/restricted arm64 c-n-f Metadata [376 B]
+Get:18 http://ports.ubuntu.com/ubuntu-ports noble-security/universe arm64 Packages [795 kB]
+Get:19 http://ports.ubuntu.com/ubuntu-ports noble-security/universe Translation-en [177 kB]
+Get:20 http://ports.ubuntu.com/ubuntu-ports noble-security/universe arm64 Components [52.0 kB]
+Get:21 http://ports.ubuntu.com/ubuntu-ports noble-security/universe arm64 c-n-f Metadata [13.3 kB]
+Get:22 http://ports.ubuntu.com/ubuntu-ports noble-security/multiverse arm64 Packages [23.5 kB]
+Get:23 http://ports.ubuntu.com/ubuntu-ports noble-security/multiverse Translation-en [4892 B]
+Get:24 http://ports.ubuntu.com/ubuntu-ports noble-security/multiverse arm64 Components [208 B]
+Get:25 http://ports.ubuntu.com/ubuntu-ports noble-security/multiverse arm64 c-n-f Metadata [344 B]
+Fetched 7365 kB in 19s (384 kB/s)
+Reading package lists...
++ echo 'apt-get update succeeded!'
+apt-get update succeeded!
++ break
++ apt-get install -f -y
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 36 not upgraded.
++ for i in {1..3}
++ echo 'Attempt 1: Installing net-tools and wireless-tools...'
+Attempt 1: Installing net-tools and wireless-tools...
++ apt-get install -y --no-install-recommends net-tools wireless-tools
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libiw30t64
+The following NEW packages will be installed:
+  libiw30t64 net-tools wireless-tools
+0 upgraded, 3 newly installed, 0 to remove and 36 not upgraded.
+Need to get 336 kB of archives.
+After this operation, 1878 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libiw30t64 arm64 30~pre9-16.1ubuntu2 [18.8 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 net-tools arm64 2.10-0.1ubuntu4 [207 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 wireless-tools arm64 30~pre9-16.1ubuntu2 [110 kB]
+Fetched 336 kB in 1s (641 kB/s)
+Selecting previously unselected package libiw30t64:arm64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 50826 files and directories currently installed.)
+Preparing to unpack .../libiw30t64_30~pre9-16.1ubuntu2_arm64.deb ...
+Adding 'diversion of /lib/aarch64-linux-gnu/libiw.so.30 to /lib/aarch64-linux-gnu/libiw.so.30.usr-is-merged by libiw30t64'
+Unpacking libiw30t64:arm64 (30~pre9-16.1ubuntu2) ...
+Selecting previously unselected package net-tools.
+Preparing to unpack .../net-tools_2.10-0.1ubuntu4_arm64.deb ...
+Unpacking net-tools (2.10-0.1ubuntu4) ...
+Selecting previously unselected package wireless-tools.
+Preparing to unpack .../wireless-tools_30~pre9-16.1ubuntu2_arm64.deb ...
+Unpacking wireless-tools (30~pre9-16.1ubuntu2) ...
+Setting up net-tools (2.10-0.1ubuntu4) ...
+Setting up libiw30t64:arm64 (30~pre9-16.1ubuntu2) ...
+Removing 'diversion of /lib/aarch64-linux-gnu/libiw.so.30 to /lib/aarch64-linux-gnu/libiw.so.30.usr-is-merged by libiw30t64'
+Setting up wireless-tools (30~pre9-16.1ubuntu2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+
+Pending kernel upgrade!
+Running kernel version:
+  6.11.0-19-generic
+Diagnostics:
+  The currently running kernel version is not the expected kernel version 6.8.0-1018-raspi.
+
+Restarting the system to load the new kernel will not be handled automatically, so you should consider rebooting.
+
+The processor microcode seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
++ echo 'Package installation succeeded!'
+Package installation succeeded!
++ break
++ apt-cache show dhcpcd5
++ echo 'Skipping dhcpcd5 installation due to dependency issues'
+Skipping dhcpcd5 installation due to dependency issues
+++ is_in_apt policykit-1
++++ apt-cache policy policykit-1
++++ wc
++++ awk '{print $1}'
+++ '[' 6 -gt 0 ']'
+++ echo 1
++ '[' 1 -eq 1 ']'
++ echo 'Skipping policykit-1 installation due to dependency issues'
+Skipping policykit-1 installation due to dependency issues
++ echo exit 101
++ chmod +x /usr/sbin/policy-rc.d
++ rm -r /usr/sbin/policy-rc.d
++ '[' ubuntu '!=' ubuntu ']'
++ '[' '' == debian_lepotato ']'
++ '[' raspberrypiarm64 == debian_lepotato ']'
++ '[' yes == yes ']'
++ '[' ubuntu == raspbian ']'
++ '[' ubuntu == raspios64 ']'
++ '[' ubuntu == raspios ']'
++ id -u ubuntu
++ echo 'Adding base user ubuntu'
+Adding base user ubuntu
+++ perl -e 'printf("%s\n", crypt($ARGV[0], "password"))' ubuntu
++ password=paCYzAqeeJ2cE
++ useradd -m -p paCYzAqeeJ2cE -s /bin/bash ubuntu
++ usermod -a -G sudo ubuntu
++ '[' -n '' ']'
++ '[' -n '' ']'
++ '[' ubuntu == debian ']'
++ '[' yes == yes ']'
++ '[' ubuntu == debian ']'
++ touch /boot/ssh
++ echo 'IPQoS 0x00'
++ echo 'IPQoS 0x00'
++ '[' -f /lib/systemd/system/regenerate_ssh_host_keys.service ']'
++ echo 0.1.0
++ echo default
++ '[' default '!=' default ']'
++ '[' default '!=' default ']'
++ '[' default '!=' default ']'
++ '[' default '!=' default ']'
++ '[' no == yes ']'
++ fix_hostname_resolution
++ echo 'Fixing hostname resolution...'
+Fixing hostname resolution...
+++ hostname
++ local hostname=thinkmore
++ grep -q '127.0.1.1.*thinkmore' /etc/hosts
++ echo 'Adding thinkmore to /etc/hosts...'
+Adding thinkmore to /etc/hosts...
++ echo '127.0.1.1 thinkmore'
++ grep -q '127.0.0.1.*localhost' /etc/hosts
++ echo 'Updated /etc/hosts:'
+Updated /etc/hosts:
++ cat /etc/hosts
+127.0.0.1	localhost
+::1		localhost ip6-localhost ip6-loopback
+ff02::1		ip6-allnodes
+ff02::2		ip6-allrouters
+
+127.0.1.1 thinkmore
++ '[' -d custompios_export ']'
++ rm chroot_script
++ '[' -d filesystem ']'
++ rm -rfv filesystem
+removed 'filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant'
+removed directory 'filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks'
+removed directory 'filesystem/ubuntu/usr/lib/dhcpcd'
+removed directory 'filesystem/ubuntu/usr/lib'
+removed directory 'filesystem/ubuntu/usr'
+removed directory 'filesystem/ubuntu'
+removed directory 'filesystem'
++ execute_chroot_script /home/omer/Documents/CustomPiOS/src/modules/network /home/omer/Documents/CustomPiOS/src/modules/network/start_chroot_script
++ '[' -f /.dockerenv ']'
++ '[' -d /home/omer/Documents/CustomPiOS/src/modules/network/filesystem ']'
++ cp -vr --preserve=mode,timestamps /home/omer/Documents/CustomPiOS/src/modules/network/filesystem .
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem' -> './filesystem'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/etc' -> './filesystem/etc'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/etc/systemd' -> './filesystem/etc/systemd'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/etc/systemd/system' -> './filesystem/etc/systemd/system'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/etc/systemd/system/disable-wifi-pwr-mgmt.service' -> './filesystem/etc/systemd/system/disable-wifi-pwr-mgmt.service'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/etc/udev' -> './filesystem/etc/udev'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/etc/udev/rules.d' -> './filesystem/etc/udev/rules.d'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/etc/udev/rules.d/070-wifi-powersave.rules' -> './filesystem/etc/udev/rules.d/070-wifi-powersave.rules'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/network-manager' -> './filesystem/network-manager'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/network-manager/boot' -> './filesystem/network-manager/boot'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/network-manager/boot/wifi.nmconnection' -> './filesystem/network-manager/boot/wifi.nmconnection'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/network-manager/root' -> './filesystem/network-manager/root'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/network-manager/root/etc' -> './filesystem/network-manager/root/etc'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/network-manager/root/etc/systemd' -> './filesystem/network-manager/root/etc/systemd'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/network-manager/root/etc/systemd/system' -> './filesystem/network-manager/root/etc/systemd/system'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/network-manager/root/etc/systemd/system/copy-network-manager-config@.service' -> './filesystem/network-manager/root/etc/systemd/system/copy-network-manager-config@.service'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/network-manager/root/opt' -> './filesystem/network-manager/root/opt'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/network-manager/root/opt/custompios' -> './filesystem/network-manager/root/opt/custompios'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/network-manager/root/opt/custompios/copy-network-manager-config' -> './filesystem/network-manager/root/opt/custompios/copy-network-manager-config'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/usr' -> './filesystem/usr'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/usr/local' -> './filesystem/usr/local'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/usr/local/bin' -> './filesystem/usr/local/bin'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/usr/local/bin/pwrsave' -> './filesystem/usr/local/bin/pwrsave'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/usr/local/bin/pwrsave-udev' -> './filesystem/usr/local/bin/pwrsave-udev'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/wpa-supplicant' -> './filesystem/wpa-supplicant'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/wpa-supplicant/boot' -> './filesystem/wpa-supplicant/boot'
+'/home/omer/Documents/CustomPiOS/src/modules/network/filesystem/wpa-supplicant/boot/custompios-wpa-supplicant.txt' -> './filesystem/wpa-supplicant/boot/custompios-wpa-supplicant.txt'
+++ uname -m
++ '[' x86_64 '!=' armv7l ']'
++ '[' arm64 == armv7l ']'
++ '[' arm64 == armhf ']'
++ '[' arm64 == aarch64 ']'
++ '[' arm64 == arm64 ']'
++ grep -q gentoo /etc/os-release
+++ which qemu-aarch64-static
++ cp /usr/bin/qemu-aarch64-static usr/bin/qemu-aarch64-static
++ cp /home/omer/Documents/CustomPiOS/src/modules/network/start_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /home/omer/Documents/CustomPiOS/src/common.sh common.sh
++ chmod 755 common.sh
+++ uname -m
++ chroot_correct_qemu x86_64 arm64 /home/omer/Documents/CustomPiOS/src/modules/network/start_chroot_script /home/omer/Documents/CustomPiOS/src
++ local host_arch=x86_64
++ local target_arch=arm64
++ local chroot_script=/home/omer/Documents/CustomPiOS/src/modules/network/start_chroot_script
++ local custom_pi_os_path=/home/omer/Documents/CustomPiOS/src
++ [[ -z x86_64 ]]
++ [[ -z arm64 ]]
++ cp /home/omer/Documents/CustomPiOS/src/modules/network/start_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /home/omer/Documents/CustomPiOS/src/common.sh common.sh
++ chmod 755 common.sh
++ [[ x86_64 != \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\h\f ]]
++ [[ arm64 == \a\a\r\c\h\6\4 ]]
++ [[ arm64 == \a\r\m\6\4 ]]
++ grep -q gentoo /etc/os-release
+++ which qemu-aarch64-static
++ cp /usr/bin/qemu-aarch64-static usr/bin/qemu-aarch64-static
++ [[ x86_64 != \a\r\m\v\7\l ]]
++ [[ x86_64 != \a\a\r\c\h\6\4 ]]
++ [[ x86_64 != \a\r\m\6\4 ]]
++ echo 'Detected we are on a non-arm device'
+Detected we are on a non-arm device
++ [[ arm64 == \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\h\f ]]
++ [[ arm64 == \a\a\r\c\h\6\4 ]]
++ [[ arm64 == \a\r\m\6\4 ]]
++ echo 'Building on non-ARM device a aarch64/arm64 system, using qemu-aarch64-static'
+Building on non-ARM device a aarch64/arm64 system, using qemu-aarch64-static
++ grep -q gentoo /etc/os-release
++ chroot . usr/bin/qemu-aarch64-static /bin/bash /chroot_script
++ set -e
++ export LC_ALL=C
++ LC_ALL=C
++ source /common.sh
++ install_cleanup_trap
++ set -e
++ trap cleanup SIGINT SIGTERM
++ '[' no == yes ']'
++ '[' yes == yes ']'
++ unpack filesystem/network-manager/root / root
++ from=filesystem/network-manager/root
++ to=/
++ owner=
++ '[' 3 -gt 2 ']'
++ owner=root
++ mkdir -p /tmp/unpack/
++ cp -v -r --preserve=mode,timestamps filesystem/network-manager/root/. /tmp/unpack/
+'filesystem/network-manager/root/./etc' -> '/tmp/unpack/./etc'
+'filesystem/network-manager/root/./etc/systemd' -> '/tmp/unpack/./etc/systemd'
+'filesystem/network-manager/root/./etc/systemd/system' -> '/tmp/unpack/./etc/systemd/system'
+'filesystem/network-manager/root/./etc/systemd/system/copy-network-manager-config@.service' -> '/tmp/unpack/./etc/systemd/system/copy-network-manager-config@.service'
+'filesystem/network-manager/root/./opt' -> '/tmp/unpack/./opt'
+'filesystem/network-manager/root/./opt/custompios' -> '/tmp/unpack/./opt/custompios'
+'filesystem/network-manager/root/./opt/custompios/copy-network-manager-config' -> '/tmp/unpack/./opt/custompios/copy-network-manager-config'
++ '[' -n root ']'
++ chown -hR root:root /tmp/unpack/
++ cp -v -r --preserve=mode,ownership,timestamps /tmp/unpack/. /
+'/tmp/unpack/./etc/systemd/system/copy-network-manager-config@.service' -> '/./etc/systemd/system/copy-network-manager-config@.service'
+'/tmp/unpack/./opt/custompios' -> '/./opt/custompios'
+'/tmp/unpack/./opt/custompios/copy-network-manager-config' -> '/./opt/custompios/copy-network-manager-config'
++ rm -r /tmp/unpack
++ unpack filesystem/network-manager/boot /boot
++ from=filesystem/network-manager/boot
++ to=/boot
++ owner=
++ '[' 2 -gt 2 ']'
++ mkdir -p /tmp/unpack/
++ cp -v -r --preserve=mode,timestamps filesystem/network-manager/boot/. /tmp/unpack/
+'filesystem/network-manager/boot/./wifi.nmconnection' -> '/tmp/unpack/./wifi.nmconnection'
++ '[' -n '' ']'
++ cp -v -r --preserve=mode,ownership,timestamps /tmp/unpack/. /boot
+'/tmp/unpack/./wifi.nmconnection' -> '/boot/./wifi.nmconnection'
++ rm -r /tmp/unpack
++ '[' raspberrypiarm64 == debian_lepotato ']'
++ systemctl_if_exists enable copy-network-manager-config@wlan0.service
++ hash systemctl
++ systemctl enable copy-network-manager-config@wlan0.service
+Created symlink /etc/systemd/system/multi-user.target.wants/copy-network-manager-config@wlan0.service -> /etc/systemd/system/copy-network-manager-config@.service.
++ '[' ubuntu == raspbian ']'
++ '[' '!' -f /etc/rc.local ']'
++ echo 'exit 0'
++ apt_update_skip
++ '[' -f /var/cache/apt/pkgcache.bin ']'
+++ date +%s
+++ stat -c %Y /var/cache/apt/pkgcache.bin
++ '[' 86 -lt 3600 ']'
++ echo_green 'APT Cache needs no update! [SKIPPED]'
++ echo -e -n '\e[92m'
+[92m+ echo APT Cache needs no 'update!' '[SKIPPED]'
+APT Cache needs no update! [SKIPPED]
++ echo -e -n '\e[0m'
+[0m+ apt-get install -y iptables
+Reading package lists...
+Building dependency tree...
+Reading state information...
+iptables is already the newest version (1.8.10-3ubuntu2).
+iptables set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 36 not upgraded.
++ sed -i 's@exit 0@@' /etc/rc.local
++ echo '/sbin/iptables -t mangle -I POSTROUTING 1 -o wlan0 -p udp --dport 123 -j TOS --set-tos 0x00'
++ echo 'exit 0'
++ '[' yes == yes ']'
++ unpack filesystem/usr/local/bin /usr/local/bin root
++ from=filesystem/usr/local/bin
++ to=/usr/local/bin
++ owner=
++ '[' 3 -gt 2 ']'
++ owner=root
++ mkdir -p /tmp/unpack/
++ cp -v -r --preserve=mode,timestamps filesystem/usr/local/bin/. /tmp/unpack/
+'filesystem/usr/local/bin/./pwrsave' -> '/tmp/unpack/./pwrsave'
+'filesystem/usr/local/bin/./pwrsave-udev' -> '/tmp/unpack/./pwrsave-udev'
++ '[' -n root ']'
++ chown -hR root:root /tmp/unpack/
++ cp -v -r --preserve=mode,ownership,timestamps /tmp/unpack/. /usr/local/bin
+'/tmp/unpack/./pwrsave' -> '/usr/local/bin/./pwrsave'
+'/tmp/unpack/./pwrsave-udev' -> '/usr/local/bin/./pwrsave-udev'
++ rm -r /tmp/unpack
++ '[' udev == rclocal ']'
++ '[' udev == service ']'
++ '[' udev == udev ']'
++ echo_green 'Installing WiFi Power Management udev rule ...'
++ echo -e -n '\e[92m'
+[92m+ echo Installing WiFi Power Management udev rule ...
+Installing WiFi Power Management udev rule ...
++ echo -e -n '\e[0m'
+[0m+ unpack filesystem/etc/udev/rules.d /etc/udev/rules.d root
++ from=filesystem/etc/udev/rules.d
++ to=/etc/udev/rules.d
++ owner=
++ '[' 3 -gt 2 ']'
++ owner=root
++ mkdir -p /tmp/unpack/
++ cp -v -r --preserve=mode,timestamps filesystem/etc/udev/rules.d/. /tmp/unpack/
+'filesystem/etc/udev/rules.d/./070-wifi-powersave.rules' -> '/tmp/unpack/./070-wifi-powersave.rules'
++ '[' -n root ']'
++ chown -hR root:root /tmp/unpack/
++ cp -v -r --preserve=mode,ownership,timestamps /tmp/unpack/. /etc/udev/rules.d
+'/tmp/unpack/./070-wifi-powersave.rules' -> '/etc/udev/rules.d/./070-wifi-powersave.rules'
++ rm -r /tmp/unpack
++ '[' udev '!=' udev ']'
++ rm -f /usr/local/bin/pwrsave
++ '[' -d custompios_export ']'
++ rm chroot_script
++ '[' -d filesystem ']'
++ rm -rfv filesystem
+removed 'filesystem/usr/local/bin/pwrsave'
+removed 'filesystem/usr/local/bin/pwrsave-udev'
+removed directory 'filesystem/usr/local/bin'
+removed directory 'filesystem/usr/local'
+removed directory 'filesystem/usr'
+removed 'filesystem/wpa-supplicant/boot/custompios-wpa-supplicant.txt'
+removed directory 'filesystem/wpa-supplicant/boot'
+removed directory 'filesystem/wpa-supplicant'
+removed 'filesystem/etc/systemd/system/disable-wifi-pwr-mgmt.service'
+removed directory 'filesystem/etc/systemd/system'
+removed directory 'filesystem/etc/systemd'
+removed 'filesystem/etc/udev/rules.d/070-wifi-powersave.rules'
+removed directory 'filesystem/etc/udev/rules.d'
+removed directory 'filesystem/etc/udev'
+removed directory 'filesystem/etc'
+removed 'filesystem/network-manager/root/opt/custompios/copy-network-manager-config'
+removed directory 'filesystem/network-manager/root/opt/custompios'
+removed directory 'filesystem/network-manager/root/opt'
+removed 'filesystem/network-manager/root/etc/systemd/system/copy-network-manager-config@.service'
+removed directory 'filesystem/network-manager/root/etc/systemd/system'
+removed directory 'filesystem/network-manager/root/etc/systemd'
+removed directory 'filesystem/network-manager/root/etc'
+removed directory 'filesystem/network-manager/root'
+removed 'filesystem/network-manager/boot/wifi.nmconnection'
+removed directory 'filesystem/network-manager/boot'
+removed directory 'filesystem/network-manager'
+removed directory 'filesystem'
++ execute_chroot_script /home/omer/Documents/CustomPiOS/src/modules/docker /home/omer/Documents/CustomPiOS/src/modules/docker/start_chroot_script
++ '[' -f /.dockerenv ']'
++ '[' -d /home/omer/Documents/CustomPiOS/src/modules/docker/filesystem ']'
++ cp -vr --preserve=mode,timestamps /home/omer/Documents/CustomPiOS/src/modules/docker/filesystem .
+'/home/omer/Documents/CustomPiOS/src/modules/docker/filesystem' -> './filesystem'
+'/home/omer/Documents/CustomPiOS/src/modules/docker/filesystem/boot' -> './filesystem/boot'
+'/home/omer/Documents/CustomPiOS/src/modules/docker/filesystem/boot/docker-compose' -> './filesystem/boot/docker-compose'
+'/home/omer/Documents/CustomPiOS/src/modules/docker/filesystem/boot/docker-compose/README' -> './filesystem/boot/docker-compose/README'
+'/home/omer/Documents/CustomPiOS/src/modules/docker/filesystem/root' -> './filesystem/root'
+'/home/omer/Documents/CustomPiOS/src/modules/docker/filesystem/root/etc' -> './filesystem/root/etc'
+'/home/omer/Documents/CustomPiOS/src/modules/docker/filesystem/root/etc/systemd' -> './filesystem/root/etc/systemd'
+'/home/omer/Documents/CustomPiOS/src/modules/docker/filesystem/root/etc/systemd/system' -> './filesystem/root/etc/systemd/system'
+'/home/omer/Documents/CustomPiOS/src/modules/docker/filesystem/root/etc/systemd/system/docker-compose.service' -> './filesystem/root/etc/systemd/system/docker-compose.service'
+'/home/omer/Documents/CustomPiOS/src/modules/docker/filesystem/root/usr' -> './filesystem/root/usr'
+'/home/omer/Documents/CustomPiOS/src/modules/docker/filesystem/root/usr/bin' -> './filesystem/root/usr/bin'
+'/home/omer/Documents/CustomPiOS/src/modules/docker/filesystem/root/usr/bin/start_docker_compose' -> './filesystem/root/usr/bin/start_docker_compose'
+'/home/omer/Documents/CustomPiOS/src/modules/docker/filesystem/root/usr/bin/stop_docker_compose' -> './filesystem/root/usr/bin/stop_docker_compose'
+++ uname -m
++ '[' x86_64 '!=' armv7l ']'
++ '[' arm64 == armv7l ']'
++ '[' arm64 == armhf ']'
++ '[' arm64 == aarch64 ']'
++ '[' arm64 == arm64 ']'
++ grep -q gentoo /etc/os-release
+++ which qemu-aarch64-static
++ cp /usr/bin/qemu-aarch64-static usr/bin/qemu-aarch64-static
++ cp /home/omer/Documents/CustomPiOS/src/modules/docker/start_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /home/omer/Documents/CustomPiOS/src/common.sh common.sh
++ chmod 755 common.sh
+++ uname -m
++ chroot_correct_qemu x86_64 arm64 /home/omer/Documents/CustomPiOS/src/modules/docker/start_chroot_script /home/omer/Documents/CustomPiOS/src
++ local host_arch=x86_64
++ local target_arch=arm64
++ local chroot_script=/home/omer/Documents/CustomPiOS/src/modules/docker/start_chroot_script
++ local custom_pi_os_path=/home/omer/Documents/CustomPiOS/src
++ [[ -z x86_64 ]]
++ [[ -z arm64 ]]
++ cp /home/omer/Documents/CustomPiOS/src/modules/docker/start_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /home/omer/Documents/CustomPiOS/src/common.sh common.sh
++ chmod 755 common.sh
++ [[ x86_64 != \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\h\f ]]
++ [[ arm64 == \a\a\r\c\h\6\4 ]]
++ [[ arm64 == \a\r\m\6\4 ]]
++ grep -q gentoo /etc/os-release
+++ which qemu-aarch64-static
++ cp /usr/bin/qemu-aarch64-static usr/bin/qemu-aarch64-static
++ [[ x86_64 != \a\r\m\v\7\l ]]
++ [[ x86_64 != \a\a\r\c\h\6\4 ]]
++ [[ x86_64 != \a\r\m\6\4 ]]
++ echo 'Detected we are on a non-arm device'
+Detected we are on a non-arm device
++ [[ arm64 == \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\h\f ]]
++ [[ arm64 == \a\a\r\c\h\6\4 ]]
++ [[ arm64 == \a\r\m\6\4 ]]
++ echo 'Building on non-ARM device a aarch64/arm64 system, using qemu-aarch64-static'
+Building on non-ARM device a aarch64/arm64 system, using qemu-aarch64-static
++ grep -q gentoo /etc/os-release
++ chroot . usr/bin/qemu-aarch64-static /bin/bash /chroot_script
++ source /common.sh
++ install_cleanup_trap
++ set -e
++ trap cleanup SIGINT SIGTERM
++ fix_dns_resolution
++ echo 'Using native DNS resolution...'
+Using native DNS resolution...
++ echo 'Uninstalling any conflicting packages...'
+Uninstalling any conflicting packages...
++ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc
++ apt-get remove -y docker.io
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package 'docker.io' is not installed, so not removed
+0 upgraded, 0 newly installed, 0 to remove and 36 not upgraded.
++ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc
++ apt-get remove -y docker-doc
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package 'docker-doc' is not installed, so not removed
+0 upgraded, 0 newly installed, 0 to remove and 36 not upgraded.
++ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc
++ apt-get remove -y docker-compose
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package 'docker-compose' is not installed, so not removed
+0 upgraded, 0 newly installed, 0 to remove and 36 not upgraded.
++ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc
++ apt-get remove -y docker-compose-v2
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package 'docker-compose-v2' is not installed, so not removed
+0 upgraded, 0 newly installed, 0 to remove and 36 not upgraded.
++ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc
++ apt-get remove -y podman-docker
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package 'podman-docker' is not installed, so not removed
+0 upgraded, 0 newly installed, 0 to remove and 36 not upgraded.
++ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc
++ apt-get remove -y containerd
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package 'containerd' is not installed, so not removed
+0 upgraded, 0 newly installed, 0 to remove and 36 not upgraded.
++ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc
++ apt-get remove -y runc
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package 'runc' is not installed, so not removed
+0 upgraded, 0 newly installed, 0 to remove and 36 not upgraded.
++ echo 'Installing Docker Engine using the official repository method...'
+Installing Docker Engine using the official repository method...
++ apt-get update
+Hit:1 http://ports.ubuntu.com/ubuntu-ports noble InRelease
+Hit:2 http://ports.ubuntu.com/ubuntu-ports noble-security InRelease
+Reading package lists...
++ echo 'Installing prerequisites...'
+Installing prerequisites...
++ apt-get install -y ca-certificates curl
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ca-certificates is already the newest version (20240203).
+ca-certificates set to manually installed.
+curl is already the newest version (8.5.0-2ubuntu10.6).
+0 upgraded, 0 newly installed, 0 to remove and 36 not upgraded.
++ install -m 0755 -d /etc/apt/keyrings
++ echo 'Adding Docker'\''s official GPG key...'
+Adding Docker's official GPG key...
++ curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
++ chmod a+r /etc/apt/keyrings/docker.asc
++ echo 'Adding Docker repository to Apt sources...'
+Adding Docker repository to Apt sources...
++ tee /etc/apt/sources.list.d/docker.list
+++ dpkg --print-architecture
+++ . /etc/os-release
++++ PRETTY_NAME='Ubuntu 24.04.2 LTS'
++++ NAME=Ubuntu
++++ VERSION_ID=24.04
++++ VERSION='24.04.2 LTS (Noble Numbat)'
++++ VERSION_CODENAME=noble
++++ ID=ubuntu
++++ ID_LIKE=debian
++++ HOME_URL=https://www.ubuntu.com/
++++ SUPPORT_URL=https://help.ubuntu.com/
++++ BUG_REPORT_URL=https://bugs.launchpad.net/ubuntu/
++++ PRIVACY_POLICY_URL=https://www.ubuntu.com/legal/terms-and-policies/privacy-policy
++++ UBUNTU_CODENAME=noble
++++ LOGO=ubuntu-logo
+++ echo noble
++ echo 'deb [arch=arm64 signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu noble stable'
++ apt-get update
+Hit:1 http://ports.ubuntu.com/ubuntu-ports noble InRelease
+Hit:2 http://ports.ubuntu.com/ubuntu-ports noble-security InRelease
+Get:3 https://download.docker.com/linux/ubuntu noble InRelease [48.8 kB]
+Get:4 https://download.docker.com/linux/ubuntu noble/stable arm64 Packages [20.3 kB]
+Fetched 69.2 kB in 7s (9495 B/s)
+Reading package lists...
++ echo 'Installing Docker packages...'
+Installing Docker packages...
++ apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  docker-ce-rootless-extras libltdl7 libslirp0 pigz slirp4netns
+Suggested packages:
+  cgroupfs-mount | cgroup-lite
+The following NEW packages will be installed:
+  containerd.io docker-buildx-plugin docker-ce docker-ce-cli
+  docker-ce-rootless-extras docker-compose-plugin libltdl7 libslirp0 pigz
+  slirp4netns
+0 upgraded, 10 newly installed, 0 to remove and 36 not upgraded.
+Need to get 103 MB of archives.
+After this operation, 405 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 pigz arm64 2.8-1 [60.7 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libltdl7 arm64 2.4.7-7build1 [40.4 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libslirp0 arm64 4.7.0-1ubuntu3 [61.8 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 slirp4netns arm64 1.2.1-1build2 [34.3 kB]
+Get:5 https://download.docker.com/linux/ubuntu noble/stable arm64 containerd.io arm64 1.7.25-1 [22.1 MB]
+Get:6 https://download.docker.com/linux/ubuntu noble/stable arm64 docker-buildx-plugin arm64 0.21.1-1~ubuntu.24.04~noble [32.7 MB]
+Get:7 https://download.docker.com/linux/ubuntu noble/stable arm64 docker-ce-cli arm64 5:28.0.1-1~ubuntu.24.04~noble [14.3 MB]
+Get:8 https://download.docker.com/linux/ubuntu noble/stable arm64 docker-ce arm64 5:28.0.1-1~ubuntu.24.04~noble [16.6 MB]
+Get:9 https://download.docker.com/linux/ubuntu noble/stable arm64 docker-ce-rootless-extras arm64 5:28.0.1-1~ubuntu.24.04~noble [5491 kB]
+Get:10 https://download.docker.com/linux/ubuntu noble/stable arm64 docker-compose-plugin arm64 2.33.1-1~ubuntu.24.04~noble [12.1 MB]
+Fetched 103 MB in 12s (8703 kB/s)
+Selecting previously unselected package pigz.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 50930 files and directories currently installed.)
+Preparing to unpack .../0-pigz_2.8-1_arm64.deb ...
+Unpacking pigz (2.8-1) ...
+Selecting previously unselected package containerd.io.
+Preparing to unpack .../1-containerd.io_1.7.25-1_arm64.deb ...
+Unpacking containerd.io (1.7.25-1) ...
+Selecting previously unselected package docker-buildx-plugin.
+Preparing to unpack .../2-docker-buildx-plugin_0.21.1-1~ubuntu.24.04~noble_arm64.deb ...
+Unpacking docker-buildx-plugin (0.21.1-1~ubuntu.24.04~noble) ...
+Selecting previously unselected package docker-ce-cli.
+Preparing to unpack .../3-docker-ce-cli_5%3a28.0.1-1~ubuntu.24.04~noble_arm64.deb ...
+Unpacking docker-ce-cli (5:28.0.1-1~ubuntu.24.04~noble) ...
+Selecting previously unselected package docker-ce.
+Preparing to unpack .../4-docker-ce_5%3a28.0.1-1~ubuntu.24.04~noble_arm64.deb ...
+Unpacking docker-ce (5:28.0.1-1~ubuntu.24.04~noble) ...
+Selecting previously unselected package docker-ce-rootless-extras.
+Preparing to unpack .../5-docker-ce-rootless-extras_5%3a28.0.1-1~ubuntu.24.04~noble_arm64.deb ...
+Unpacking docker-ce-rootless-extras (5:28.0.1-1~ubuntu.24.04~noble) ...
+Selecting previously unselected package docker-compose-plugin.
+Preparing to unpack .../6-docker-compose-plugin_2.33.1-1~ubuntu.24.04~noble_arm64.deb ...
+Unpacking docker-compose-plugin (2.33.1-1~ubuntu.24.04~noble) ...
+Selecting previously unselected package libltdl7:arm64.
+Preparing to unpack .../7-libltdl7_2.4.7-7build1_arm64.deb ...
+Unpacking libltdl7:arm64 (2.4.7-7build1) ...
+Selecting previously unselected package libslirp0:arm64.
+Preparing to unpack .../8-libslirp0_4.7.0-1ubuntu3_arm64.deb ...
+Unpacking libslirp0:arm64 (4.7.0-1ubuntu3) ...
+Selecting previously unselected package slirp4netns.
+Preparing to unpack .../9-slirp4netns_1.2.1-1build2_arm64.deb ...
+Unpacking slirp4netns (1.2.1-1build2) ...
+Setting up docker-buildx-plugin (0.21.1-1~ubuntu.24.04~noble) ...
+Setting up containerd.io (1.7.25-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service -> /usr/lib/systemd/system/containerd.service.
+Setting up docker-compose-plugin (2.33.1-1~ubuntu.24.04~noble) ...
+Setting up libltdl7:arm64 (2.4.7-7build1) ...
+Setting up docker-ce-cli (5:28.0.1-1~ubuntu.24.04~noble) ...
+Setting up libslirp0:arm64 (4.7.0-1ubuntu3) ...
+Setting up pigz (2.8-1) ...
+Setting up docker-ce-rootless-extras (5:28.0.1-1~ubuntu.24.04~noble) ...
+Setting up slirp4netns (1.2.1-1build2) ...
+Setting up docker-ce (5:28.0.1-1~ubuntu.24.04~noble) ...
+Running in chroot, ignoring request.
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service -> /usr/lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket -> /usr/lib/systemd/system/docker.socket.
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+
+Pending kernel upgrade!
+Running kernel version:
+  6.11.0-19-generic
+Diagnostics:
+  The currently running kernel version is not the expected kernel version 6.8.0-1018-raspi.
+
+Restarting the system to load the new kernel will not be handled automatically, so you should consider rebooting.
+
+The processor microcode seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
++ command -v docker
++ echo 'Docker installed successfully!'
+Docker installed successfully!
++ echo 'Testing Docker installation...'
+Testing Docker installation...
++ docker --version
+Docker version 28.0.1, build 068a01e
++ docker compose version
++ echo 'Docker Compose plugin installed successfully!'
+Docker Compose plugin installed successfully!
++ docker compose version
+Docker Compose version v2.33.1
++ command -v docker
++ '[' no == yes ']'
++ '[' yes == yes ']'
++ unpack /filesystem/root /
++ from=/filesystem/root
++ to=/
++ owner=
++ '[' 2 -gt 2 ']'
++ mkdir -p /tmp/unpack/
++ cp -v -r --preserve=mode,timestamps /filesystem/root/. /tmp/unpack/
+'/filesystem/root/./etc' -> '/tmp/unpack/./etc'
+'/filesystem/root/./etc/systemd' -> '/tmp/unpack/./etc/systemd'
+'/filesystem/root/./etc/systemd/system' -> '/tmp/unpack/./etc/systemd/system'
+'/filesystem/root/./etc/systemd/system/docker-compose.service' -> '/tmp/unpack/./etc/systemd/system/docker-compose.service'
+'/filesystem/root/./usr' -> '/tmp/unpack/./usr'
+'/filesystem/root/./usr/bin' -> '/tmp/unpack/./usr/bin'
+'/filesystem/root/./usr/bin/start_docker_compose' -> '/tmp/unpack/./usr/bin/start_docker_compose'
+'/filesystem/root/./usr/bin/stop_docker_compose' -> '/tmp/unpack/./usr/bin/stop_docker_compose'
++ '[' -n '' ']'
++ cp -v -r --preserve=mode,ownership,timestamps /tmp/unpack/. /
+'/tmp/unpack/./etc/systemd/system/docker-compose.service' -> '/./etc/systemd/system/docker-compose.service'
+'/tmp/unpack/./usr/bin/start_docker_compose' -> '/./usr/bin/start_docker_compose'
+'/tmp/unpack/./usr/bin/stop_docker_compose' -> '/./usr/bin/stop_docker_compose'
++ rm -r /tmp/unpack
++ unpack /filesystem/boot /boot
++ from=/filesystem/boot
++ to=/boot
++ owner=
++ '[' 2 -gt 2 ']'
++ mkdir -p /tmp/unpack/
++ cp -v -r --preserve=mode,timestamps /filesystem/boot/. /tmp/unpack/
+'/filesystem/boot/./docker-compose' -> '/tmp/unpack/./docker-compose'
+'/filesystem/boot/./docker-compose/README' -> '/tmp/unpack/./docker-compose/README'
++ '[' -n '' ']'
++ cp -v -r --preserve=mode,ownership,timestamps /tmp/unpack/. /boot
+'/tmp/unpack/./docker-compose' -> '/boot/./docker-compose'
+'/tmp/unpack/./docker-compose/README' -> '/boot/./docker-compose/README'
++ rm -r /tmp/unpack
++ '[' default == default ']'
++ DOCKER_COMPOSE_BOOT_PATH_ACTUAL=/boot/docker-compose
++ sed -i s@DOCKER_COMPOSE_BOOT_PATH_PLACEHOLDER@/boot/docker-compose@g /etc/systemd/system/docker-compose.service
++ sed -i s@DOCKER_COMPOSE_BOOT_PATH_PLACEHOLDER@/boot/docker-compose@g /usr/bin/start_docker_compose
++ sed -i s@DOCKER_COMPOSE_BOOT_PATH_PLACEHOLDER@/boot/docker-compose@g /usr/bin/stop_docker_compose
++ systemctl enable docker-compose.service
+Created symlink /etc/systemd/system/multi-user.target.wants/docker-compose.service -> /etc/systemd/system/docker-compose.service.
++ '[' -f /usr/local/bin/docker-compose ']'
++ command -v docker
++ echo 'Running hello-world container to verify Docker installation...'
+Running hello-world container to verify Docker installation...
++ docker run --rm hello-world
+docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+
+Run 'docker run --help' for more information
++ echo 'WARNING: Failed to run hello-world container, Docker may not be working correctly'
+WARNING: Failed to run hello-world container, Docker may not be working correctly
++ apt-get clean
++ apt-get autoremove -y
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 36 not upgraded.
++ '[' -d custompios_export ']'
++ rm chroot_script
++ '[' -d filesystem ']'
++ rm -rfv filesystem
+removed 'filesystem/root/usr/bin/stop_docker_compose'
+removed 'filesystem/root/usr/bin/start_docker_compose'
+removed directory 'filesystem/root/usr/bin'
+removed directory 'filesystem/root/usr'
+removed 'filesystem/root/etc/systemd/system/docker-compose.service'
+removed directory 'filesystem/root/etc/systemd/system'
+removed directory 'filesystem/root/etc/systemd'
+removed directory 'filesystem/root/etc'
+removed directory 'filesystem/root'
+removed 'filesystem/boot/docker-compose/README'
+removed directory 'filesystem/boot/docker-compose'
+removed directory 'filesystem/boot'
+removed directory 'filesystem'
++ execute_chroot_script /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/start_chroot_script
++ '[' -f /.dockerenv ']'
++ '[' -d /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem ']'
++ cp -vr --preserve=mode,timestamps /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem .
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem' -> './filesystem'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/etc' -> './filesystem/etc'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/etc/caddy' -> './filesystem/etc/caddy'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/etc/caddy/Caddyfile' -> './filesystem/etc/caddy/Caddyfile'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/boot' -> './filesystem/boot'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/boot/README' -> './filesystem/boot/README'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/home' -> './filesystem/home'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/home/ubuntu' -> './filesystem/home/ubuntu'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/home/ubuntu/photoprism' -> './filesystem/home/ubuntu/photoprism'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/home/ubuntu/photoprism/compose.yaml' -> './filesystem/home/ubuntu/photoprism/compose.yaml'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/home/pi' -> './filesystem/home/pi'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/home/pi/README' -> './filesystem/home/pi/README'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/home/root' -> './filesystem/home/root'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/home/root/README' -> './filesystem/home/root/README'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/root' -> './filesystem/root'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/root/README' -> './filesystem/root/README'
+++ uname -m
++ '[' x86_64 '!=' armv7l ']'
++ '[' arm64 == armv7l ']'
++ '[' arm64 == armhf ']'
++ '[' arm64 == aarch64 ']'
++ '[' arm64 == arm64 ']'
++ grep -q gentoo /etc/os-release
+++ which qemu-aarch64-static
++ cp /usr/bin/qemu-aarch64-static usr/bin/qemu-aarch64-static
++ cp /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/start_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /home/omer/Documents/CustomPiOS/src/common.sh common.sh
++ chmod 755 common.sh
+++ uname -m
++ chroot_correct_qemu x86_64 arm64 /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/start_chroot_script /home/omer/Documents/CustomPiOS/src
++ local host_arch=x86_64
++ local target_arch=arm64
++ local chroot_script=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/start_chroot_script
++ local custom_pi_os_path=/home/omer/Documents/CustomPiOS/src
++ [[ -z x86_64 ]]
++ [[ -z arm64 ]]
++ cp /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/start_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /home/omer/Documents/CustomPiOS/src/common.sh common.sh
++ chmod 755 common.sh
++ [[ x86_64 != \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\h\f ]]
++ [[ arm64 == \a\a\r\c\h\6\4 ]]
++ [[ arm64 == \a\r\m\6\4 ]]
++ grep -q gentoo /etc/os-release
+++ which qemu-aarch64-static
++ cp /usr/bin/qemu-aarch64-static usr/bin/qemu-aarch64-static
++ [[ x86_64 != \a\r\m\v\7\l ]]
++ [[ x86_64 != \a\a\r\c\h\6\4 ]]
++ [[ x86_64 != \a\r\m\6\4 ]]
++ echo 'Detected we are on a non-arm device'
+Detected we are on a non-arm device
++ [[ arm64 == \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\h\f ]]
++ [[ arm64 == \a\a\r\c\h\6\4 ]]
++ [[ arm64 == \a\r\m\6\4 ]]
++ echo 'Building on non-ARM device a aarch64/arm64 system, using qemu-aarch64-static'
+Building on non-ARM device a aarch64/arm64 system, using qemu-aarch64-static
++ grep -q gentoo /etc/os-release
++ chroot . usr/bin/qemu-aarch64-static /bin/bash /chroot_script
++ set -e
++ source /common.sh
++ install_cleanup_trap
++ set -e
++ trap cleanup SIGINT SIGTERM
++ mkdir -p /opt/photoprism/database /opt/photoprism/storage /opt/photoprism/originals /opt/photoprism/import
++ chown -R 1000:1000 /home/ubuntu /opt/photoprism
++ echo 'Installing Caddy...'
+Installing Caddy...
++ apt-get install -y debian-keyring debian-archive-keyring apt-transport-https curl
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (8.5.0-2ubuntu10.6).
+The following NEW packages will be installed:
+  apt-transport-https debian-archive-keyring debian-keyring
+0 upgraded, 3 newly installed, 0 to remove and 36 not upgraded.
+Need to get 31.5 MB of archives.
+After this operation, 33.4 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 apt-transport-https all 2.7.14build2 [3974 B]
+Get:2 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 debian-archive-keyring all 2023.4ubuntu1 [168 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 debian-keyring all 2023.12.24 [31.3 MB]
+Fetched 31.5 MB in 6s (5211 kB/s)
+Selecting previously unselected package apt-transport-https.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 51195 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_2.7.14build2_all.deb ...
+Unpacking apt-transport-https (2.7.14build2) ...
+Selecting previously unselected package debian-archive-keyring.
+Preparing to unpack .../debian-archive-keyring_2023.4ubuntu1_all.deb ...
+Unpacking debian-archive-keyring (2023.4ubuntu1) ...
+Selecting previously unselected package debian-keyring.
+Preparing to unpack .../debian-keyring_2023.12.24_all.deb ...
+Unpacking debian-keyring (2023.12.24) ...
+Setting up apt-transport-https (2.7.14build2) ...
+Setting up debian-archive-keyring (2023.4ubuntu1) ...
+Setting up debian-keyring (2023.12.24) ...
+
+Pending kernel upgrade!
+Running kernel version:
+  6.11.0-19-generic
+Diagnostics:
+  The currently running kernel version is not the expected kernel version 6.8.0-1018-raspi.
+
+Restarting the system to load the new kernel will not be handled automatically, so you should consider rebooting.
+
+The processor microcode seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
++ curl -1sLf https://dl.cloudsmith.io/public/caddy/stable/gpg.key
++ gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
++ curl -1sLf https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt
++ tee /etc/apt/sources.list.d/caddy-stable.list
+# Source: Caddy
+# Site: https://github.com/caddyserver/caddy
+# Repository: Caddy / stable
+# Description: Fast, multi-platform web server with automatic HTTPS
+
+
+deb [signed-by=/usr/share/keyrings/caddy-stable-archive-keyring.gpg] https://dl.cloudsmith.io/public/caddy/stable/deb/debian any-version main
+
+deb-src [signed-by=/usr/share/keyrings/caddy-stable-archive-keyring.gpg] https://dl.cloudsmith.io/public/caddy/stable/deb/debian any-version main
++ apt-get update
+Hit:1 http://ports.ubuntu.com/ubuntu-ports noble InRelease
+Hit:2 http://ports.ubuntu.com/ubuntu-ports noble-security InRelease
+Hit:3 https://download.docker.com/linux/ubuntu noble InRelease
+Get:4 https://dl.cloudsmith.io/public/caddy/stable/deb/debian any-version InRelease [8266 B]
+Get:5 https://dl.cloudsmith.io/public/caddy/stable/deb/debian any-version/main arm64 Packages [3932 B]
+Fetched 12.2 kB in 13s (917 B/s)
+Reading package lists...
++ apt-get install -y caddy
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  caddy
+0 upgraded, 1 newly installed, 0 to remove and 36 not upgraded.
+Need to get 13.3 MB of archives.
+After this operation, 38.7 MB of additional disk space will be used.
+Get:1 https://dl.cloudsmith.io/public/caddy/stable/deb/debian any-version/main arm64 caddy arm64 2.9.1 [13.3 MB]
+Fetched 13.3 MB in 3s (4004 kB/s)
+Selecting previously unselected package caddy.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 51231 files and directories currently installed.)
+Preparing to unpack .../archives/caddy_2.9.1_arm64.deb ...
+Unpacking caddy (2.9.1) ...
+Setting up caddy (2.9.1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/caddy.service -> /usr/lib/systemd/system/caddy.service.
+Running in chroot, ignoring command 'is-active'
+Running in chroot, ignoring command 'start'
+Processing triggers for man-db (2.12.0-4build2) ...
+
+Pending kernel upgrade!
+Running kernel version:
+  6.11.0-19-generic
+Diagnostics:
+  The currently running kernel version is not the expected kernel version 6.8.0-1018-raspi.
+
+Restarting the system to load the new kernel will not be handled automatically, so you should consider rebooting.
+
+The processor microcode seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
++ mkdir -p /etc/caddy
++ mkdir -p /var/lib/caddy
++ mkdir -p /var/log/caddy
++ mkdir -p /var/www
++ chown -R root:root /etc/caddy /var/lib/caddy /var/log/caddy /var/www
++ chmod 755 /etc/caddy /var/lib/caddy /var/log/caddy /var/www
++ cp /filesystem/etc/caddy/Caddyfile /etc/caddy/Caddyfile
++ chmod 644 /etc/caddy/Caddyfile
+++ which caddy
++ setcap CAP_NET_BIND_SERVICE=+eip /usr/bin/caddy
++ apt-get install -y avahi-daemon
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libavahi-common-data libavahi-common3 libavahi-core7 libdaemon0 libnss-mdns
+Suggested packages:
+  avahi-autoipd avahi-autoipd | zeroconf
+The following NEW packages will be installed:
+  avahi-daemon libavahi-common-data libavahi-common3 libavahi-core7 libdaemon0
+  libnss-mdns
+0 upgraded, 6 newly installed, 0 to remove and 36 not upgraded.
+Need to get 242 kB of archives.
+After this operation, 1382 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libavahi-common-data arm64 0.8-13ubuntu6 [29.6 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libavahi-common3 arm64 0.8-13ubuntu6 [23.3 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libavahi-core7 arm64 0.8-13ubuntu6 [85.7 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libdaemon0 arm64 0.14-7.1ubuntu4 [13.4 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 avahi-daemon arm64 0.8-13ubuntu6 [66.0 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libnss-mdns arm64 0.15.1-4build1 [23.6 kB]
+Fetched 242 kB in 1s (474 kB/s)
+Selecting previously unselected package libavahi-common-data:arm64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 51266 files and directories currently installed.)
+Preparing to unpack .../0-libavahi-common-data_0.8-13ubuntu6_arm64.deb ...
+Unpacking libavahi-common-data:arm64 (0.8-13ubuntu6) ...
+Selecting previously unselected package libavahi-common3:arm64.
+Preparing to unpack .../1-libavahi-common3_0.8-13ubuntu6_arm64.deb ...
+Unpacking libavahi-common3:arm64 (0.8-13ubuntu6) ...
+Selecting previously unselected package libavahi-core7:arm64.
+Preparing to unpack .../2-libavahi-core7_0.8-13ubuntu6_arm64.deb ...
+Unpacking libavahi-core7:arm64 (0.8-13ubuntu6) ...
+Selecting previously unselected package libdaemon0:arm64.
+Preparing to unpack .../3-libdaemon0_0.14-7.1ubuntu4_arm64.deb ...
+Unpacking libdaemon0:arm64 (0.14-7.1ubuntu4) ...
+Selecting previously unselected package avahi-daemon.
+Preparing to unpack .../4-avahi-daemon_0.8-13ubuntu6_arm64.deb ...
+Unpacking avahi-daemon (0.8-13ubuntu6) ...
+Selecting previously unselected package libnss-mdns:arm64.
+Preparing to unpack .../5-libnss-mdns_0.15.1-4build1_arm64.deb ...
+Unpacking libnss-mdns:arm64 (0.15.1-4build1) ...
+Setting up libavahi-common-data:arm64 (0.8-13ubuntu6) ...
+Setting up libdaemon0:arm64 (0.14-7.1ubuntu4) ...
+Setting up libnss-mdns:arm64 (0.15.1-4build1) ...
+Setting up libavahi-common3:arm64 (0.8-13ubuntu6) ...
+Setting up libavahi-core7:arm64 (0.8-13ubuntu6) ...
+Setting up avahi-daemon (0.8-13ubuntu6) ...
+Running in chroot, ignoring request.
+ * Reloading system message bus config...       [80G Failed to open connection to "system" message bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+invoke-rc.d: initscript dbus, action "force-reload" failed.
+Created symlink /etc/systemd/system/dbus-org.freedesktop.Avahi.service -> /usr/lib/systemd/system/avahi-daemon.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/avahi-daemon.service -> /usr/lib/systemd/system/avahi-daemon.service.
+Created symlink /etc/systemd/system/sockets.target.wants/avahi-daemon.socket -> /usr/lib/systemd/system/avahi-daemon.socket.
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for dbus (1.14.10-4ubuntu4.1) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+
+Pending kernel upgrade!
+Running kernel version:
+  6.11.0-19-generic
+Diagnostics:
+  The currently running kernel version is not the expected kernel version 6.8.0-1018-raspi.
+
+Restarting the system to load the new kernel will not be handled automatically, so you should consider rebooting.
+
+The processor microcode seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
++ systemctl enable docker.service
+Synchronizing state of docker.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable docker
++ systemctl enable containerd.service
++ mkdir -p /mnt/a /mnt/b /mnt/c /mnt/d
++ chown -R 1000:1000 /mnt
++ tee -a /etc/fstab
++ echo '/dev/sda1  /mnt/a  auto  nofail,noatime,noauto,x-systemd.automount,x-systemd.device-timeout=1ms,uid=1000,gid=1000  0  0'
+/dev/sda1  /mnt/a  auto  nofail,noatime,noauto,x-systemd.automount,x-systemd.device-timeout=1ms,uid=1000,gid=1000  0  0
++ echo '/dev/sdb1  /mnt/b  auto  nofail,noatime,noauto,x-systemd.automount,x-systemd.device-timeout=1ms,uid=1000,gid=1000  0  0'
++ tee -a /etc/fstab
+/dev/sdb1  /mnt/b  auto  nofail,noatime,noauto,x-systemd.automount,x-systemd.device-timeout=1ms,uid=1000,gid=1000  0  0
++ tee -a /etc/fstab
++ echo '/dev/sdc1  /mnt/c  auto  nofail,noatime,noauto,x-systemd.automount,x-systemd.device-timeout=1ms,uid=1000,gid=1000  0  0'
+/dev/sdc1  /mnt/c  auto  nofail,noatime,noauto,x-systemd.automount,x-systemd.device-timeout=1ms,uid=1000,gid=1000  0  0
++ tee -a /etc/fstab
++ echo '/dev/sdd1  /mnt/d  auto  nofail,noatime,noauto,x-systemd.automount,x-systemd.device-timeout=1ms,uid=1000,gid=1000  0  0'
+/dev/sdd1  /mnt/d  auto  nofail,noatime,noauto,x-systemd.automount,x-systemd.device-timeout=1ms,uid=1000,gid=1000  0  0
++ unpack /filesystem/root /
++ from=/filesystem/root
++ to=/
++ owner=
++ '[' 2 -gt 2 ']'
++ mkdir -p /tmp/unpack/
++ cp -v -r --preserve=mode,timestamps /filesystem/root/. /tmp/unpack/
+'/filesystem/root/./README' -> '/tmp/unpack/./README'
++ '[' -n '' ']'
++ cp -v -r --preserve=mode,ownership,timestamps /tmp/unpack/. /
+'/tmp/unpack/./README' -> '/./README'
++ rm -r /tmp/unpack
++ unpack /filesystem/home/ubuntu /home/ubuntu
++ from=/filesystem/home/ubuntu
++ to=/home/ubuntu
++ owner=
++ '[' 2 -gt 2 ']'
++ mkdir -p /tmp/unpack/
++ cp -v -r --preserve=mode,timestamps /filesystem/home/ubuntu/. /tmp/unpack/
+'/filesystem/home/ubuntu/./photoprism' -> '/tmp/unpack/./photoprism'
+'/filesystem/home/ubuntu/./photoprism/compose.yaml' -> '/tmp/unpack/./photoprism/compose.yaml'
++ '[' -n '' ']'
++ cp -v -r --preserve=mode,ownership,timestamps /tmp/unpack/. /home/ubuntu
+'/tmp/unpack/./photoprism' -> '/home/ubuntu/./photoprism'
+'/tmp/unpack/./photoprism/compose.yaml' -> '/home/ubuntu/./photoprism/compose.yaml'
++ rm -r /tmp/unpack
++ cat
++ cat
++ systemctl enable photoprism.service
+Created symlink /etc/systemd/system/multi-user.target.wants/photoprism.service -> /etc/systemd/system/photoprism.service.
++ systemctl enable caddy.service
++ apt-get clean
++ apt-get autoremove -y
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 36 not upgraded.
++ '[' -d custompios_export ']'
++ rm chroot_script
++ '[' -d filesystem ']'
++ rm -rfv filesystem
+removed 'filesystem/etc/caddy/Caddyfile'
+removed directory 'filesystem/etc/caddy'
+removed directory 'filesystem/etc'
+removed 'filesystem/home/pi/README'
+removed directory 'filesystem/home/pi'
+removed 'filesystem/home/ubuntu/photoprism/compose.yaml'
+removed directory 'filesystem/home/ubuntu/photoprism'
+removed directory 'filesystem/home/ubuntu'
+removed 'filesystem/home/root/README'
+removed directory 'filesystem/home/root'
+removed directory 'filesystem/home'
+removed 'filesystem/root/README'
+removed directory 'filesystem/root'
+removed 'filesystem/boot/README'
+removed directory 'filesystem/boot'
+removed directory 'filesystem'
++ execute_chroot_script /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/end_chroot_script
++ '[' -f /.dockerenv ']'
++ '[' -d /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem ']'
++ cp -vr --preserve=mode,timestamps /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem .
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem' -> './filesystem'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/etc' -> './filesystem/etc'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/etc/caddy' -> './filesystem/etc/caddy'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/etc/caddy/Caddyfile' -> './filesystem/etc/caddy/Caddyfile'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/boot' -> './filesystem/boot'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/boot/README' -> './filesystem/boot/README'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/home' -> './filesystem/home'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/home/ubuntu' -> './filesystem/home/ubuntu'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/home/ubuntu/photoprism' -> './filesystem/home/ubuntu/photoprism'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/home/ubuntu/photoprism/compose.yaml' -> './filesystem/home/ubuntu/photoprism/compose.yaml'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/home/pi' -> './filesystem/home/pi'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/home/pi/README' -> './filesystem/home/pi/README'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/home/root' -> './filesystem/home/root'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/home/root/README' -> './filesystem/home/root/README'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/root' -> './filesystem/root'
+'/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/filesystem/root/README' -> './filesystem/root/README'
+++ uname -m
++ '[' x86_64 '!=' armv7l ']'
++ '[' arm64 == armv7l ']'
++ '[' arm64 == armhf ']'
++ '[' arm64 == aarch64 ']'
++ '[' arm64 == arm64 ']'
++ grep -q gentoo /etc/os-release
+++ which qemu-aarch64-static
++ cp /usr/bin/qemu-aarch64-static usr/bin/qemu-aarch64-static
++ cp /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/end_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /home/omer/Documents/CustomPiOS/src/common.sh common.sh
++ chmod 755 common.sh
+++ uname -m
++ chroot_correct_qemu x86_64 arm64 /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/end_chroot_script /home/omer/Documents/CustomPiOS/src
++ local host_arch=x86_64
++ local target_arch=arm64
++ local chroot_script=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/end_chroot_script
++ local custom_pi_os_path=/home/omer/Documents/CustomPiOS/src
++ [[ -z x86_64 ]]
++ [[ -z arm64 ]]
++ cp /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/end_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /home/omer/Documents/CustomPiOS/src/common.sh common.sh
++ chmod 755 common.sh
++ [[ x86_64 != \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\h\f ]]
++ [[ arm64 == \a\a\r\c\h\6\4 ]]
++ [[ arm64 == \a\r\m\6\4 ]]
++ grep -q gentoo /etc/os-release
+++ which qemu-aarch64-static
++ cp /usr/bin/qemu-aarch64-static usr/bin/qemu-aarch64-static
++ [[ x86_64 != \a\r\m\v\7\l ]]
++ [[ x86_64 != \a\a\r\c\h\6\4 ]]
++ [[ x86_64 != \a\r\m\6\4 ]]
++ echo 'Detected we are on a non-arm device'
+Detected we are on a non-arm device
++ [[ arm64 == \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\h\f ]]
++ [[ arm64 == \a\a\r\c\h\6\4 ]]
++ [[ arm64 == \a\r\m\6\4 ]]
++ echo 'Building on non-ARM device a aarch64/arm64 system, using qemu-aarch64-static'
+Building on non-ARM device a aarch64/arm64 system, using qemu-aarch64-static
++ grep -q gentoo /etc/os-release
++ chroot . usr/bin/qemu-aarch64-static /bin/bash /chroot_script
++ set -e
++ '[' -d custompios_export ']'
++ rm chroot_script
++ '[' -d filesystem ']'
++ rm -rfv filesystem
+removed 'filesystem/etc/caddy/Caddyfile'
+removed directory 'filesystem/etc/caddy'
+removed directory 'filesystem/etc'
+removed 'filesystem/home/pi/README'
+removed directory 'filesystem/home/pi'
+removed 'filesystem/home/ubuntu/photoprism/compose.yaml'
+removed directory 'filesystem/home/ubuntu/photoprism'
+removed directory 'filesystem/home/ubuntu'
+removed 'filesystem/home/root/README'
+removed directory 'filesystem/home/root'
+removed directory 'filesystem/home'
+removed 'filesystem/root/README'
+removed directory 'filesystem/root'
+removed 'filesystem/boot/README'
+removed directory 'filesystem/boot'
+removed directory 'filesystem'
++ execute_chroot_script /home/omer/Documents/CustomPiOS/src/modules/base /home/omer/Documents/CustomPiOS/src/modules/base/end_chroot_script
++ '[' -f /.dockerenv ']'
++ '[' -d /home/omer/Documents/CustomPiOS/src/modules/base/filesystem ']'
++ cp -vr --preserve=mode,timestamps /home/omer/Documents/CustomPiOS/src/modules/base/filesystem .
+'/home/omer/Documents/CustomPiOS/src/modules/base/filesystem' -> './filesystem'
+'/home/omer/Documents/CustomPiOS/src/modules/base/filesystem/ubuntu' -> './filesystem/ubuntu'
+'/home/omer/Documents/CustomPiOS/src/modules/base/filesystem/ubuntu/usr' -> './filesystem/ubuntu/usr'
+'/home/omer/Documents/CustomPiOS/src/modules/base/filesystem/ubuntu/usr/lib' -> './filesystem/ubuntu/usr/lib'
+'/home/omer/Documents/CustomPiOS/src/modules/base/filesystem/ubuntu/usr/lib/dhcpcd' -> './filesystem/ubuntu/usr/lib/dhcpcd'
+'/home/omer/Documents/CustomPiOS/src/modules/base/filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks' -> './filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks'
+'/home/omer/Documents/CustomPiOS/src/modules/base/filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant' -> './filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant'
+++ uname -m
++ '[' x86_64 '!=' armv7l ']'
++ '[' arm64 == armv7l ']'
++ '[' arm64 == armhf ']'
++ '[' arm64 == aarch64 ']'
++ '[' arm64 == arm64 ']'
++ grep -q gentoo /etc/os-release
+++ which qemu-aarch64-static
++ cp /usr/bin/qemu-aarch64-static usr/bin/qemu-aarch64-static
++ cp /home/omer/Documents/CustomPiOS/src/modules/base/end_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /home/omer/Documents/CustomPiOS/src/common.sh common.sh
++ chmod 755 common.sh
+++ uname -m
++ chroot_correct_qemu x86_64 arm64 /home/omer/Documents/CustomPiOS/src/modules/base/end_chroot_script /home/omer/Documents/CustomPiOS/src
++ local host_arch=x86_64
++ local target_arch=arm64
++ local chroot_script=/home/omer/Documents/CustomPiOS/src/modules/base/end_chroot_script
++ local custom_pi_os_path=/home/omer/Documents/CustomPiOS/src
++ [[ -z x86_64 ]]
++ [[ -z arm64 ]]
++ cp /home/omer/Documents/CustomPiOS/src/modules/base/end_chroot_script chroot_script
++ chmod 755 chroot_script
++ cp /home/omer/Documents/CustomPiOS/src/common.sh common.sh
++ chmod 755 common.sh
++ [[ x86_64 != \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\h\f ]]
++ [[ arm64 == \a\a\r\c\h\6\4 ]]
++ [[ arm64 == \a\r\m\6\4 ]]
++ grep -q gentoo /etc/os-release
+++ which qemu-aarch64-static
++ cp /usr/bin/qemu-aarch64-static usr/bin/qemu-aarch64-static
++ [[ x86_64 != \a\r\m\v\7\l ]]
++ [[ x86_64 != \a\a\r\c\h\6\4 ]]
++ [[ x86_64 != \a\r\m\6\4 ]]
++ echo 'Detected we are on a non-arm device'
+Detected we are on a non-arm device
++ [[ arm64 == \a\r\m\v\7\l ]]
++ [[ arm64 == \a\r\m\h\f ]]
++ [[ arm64 == \a\a\r\c\h\6\4 ]]
++ [[ arm64 == \a\r\m\6\4 ]]
++ echo 'Building on non-ARM device a aarch64/arm64 system, using qemu-aarch64-static'
+Building on non-ARM device a aarch64/arm64 system, using qemu-aarch64-static
++ grep -q gentoo /etc/os-release
++ chroot . usr/bin/qemu-aarch64-static /bin/bash /chroot_script
++ '[' -n '' ']'
++ '[' -n '' ']'
++ '[' -n '' ']'
++ '[' -f /etc/hostname ']'
++ read FILE_HOST_NAME
++ FILE_HOST_NAME=ubuntu
++ echo photoprismpi
++ sed -i -e s@ubuntu@photoprismpi@g /etc/hosts
++ '[' ubuntu == ubuntu ']'
++ echo '127.0.0.1 photoprismpi'
++ '[' -f /.resolvconf_link ']'
++ '[' -f /etc/resolv.conf.orig ']'
++ '[' yes = yes ']'
++ apt-get clean
++ apt-get autoremove -y
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 36 not upgraded.
++ '[' -d custompios_export ']'
++ rm chroot_script
++ '[' -d filesystem ']'
++ rm -rfv filesystem
+removed 'filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant'
+removed directory 'filesystem/ubuntu/usr/lib/dhcpcd/dhcpcd-hooks'
+removed directory 'filesystem/ubuntu/usr/lib/dhcpcd'
+removed directory 'filesystem/ubuntu/usr/lib'
+removed directory 'filesystem/ubuntu/usr'
+removed directory 'filesystem/ubuntu'
+removed directory 'filesystem'
++++ '[' -n '' ']'
++++ '[' -n '' ']'
++++ '[' no == yes ']'
++++ popd
+/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace /home/omer/Documents/CustomPiOS/PhotoPrismPi/src
++++ unmount_image /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount
++++ mount_path=/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount
++++ force=
++++ '[' 1 -gt 1 ']'
++++ sync
++++ '[' -n '' ']'
+++++ sudo mount
+++++ grep /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount
+++++ awk -F ' on ' '{print $2}'
+++++ awk '{print $1}'
+++++ sort -r
+sudo: unable to resolve host thinkmore: Name or service not known
++++ for m in $(sudo mount | grep $mount_path | awk -F " on " '{print $2}' | awk '{print $1}' | sort -r)
++++ echo_green 'Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/var/cache/apt...'
++++ echo -e -n '\e[92m'
+[92m+++ echo Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/var/cache/apt...
+Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/var/cache/apt...
++++ echo -e -n '\e[0m'
+[0m+++ sudo umount /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/var/cache/apt
+sudo: unable to resolve host thinkmore: Name or service not known
++++ for m in $(sudo mount | grep $mount_path | awk -F " on " '{print $2}' | awk '{print $1}' | sort -r)
++++ echo_green 'Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/sys...'
++++ echo -e -n '\e[92m'
+[92m+++ echo Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/sys...
+Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/sys...
++++ echo -e -n '\e[0m'
+[0m+++ sudo umount /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/sys
+sudo: unable to resolve host thinkmore: Name or service not known
++++ for m in $(sudo mount | grep $mount_path | awk -F " on " '{print $2}' | awk '{print $1}' | sort -r)
++++ echo_green 'Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/proc...'
++++ echo -e -n '\e[92m'
+[92m+++ echo Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/proc...
+Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/proc...
++++ echo -e -n '\e[0m'
+[0m+++ sudo umount /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/proc
+sudo: unable to resolve host thinkmore: Name or service not known
++++ for m in $(sudo mount | grep $mount_path | awk -F " on " '{print $2}' | awk '{print $1}' | sort -r)
++++ echo_green 'Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/dev/pts...'
++++ echo -e -n '\e[92m'
+[92m+++ echo Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/dev/pts...
+Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/dev/pts...
++++ echo -e -n '\e[0m'
+[0m+++ sudo umount /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/dev/pts
+sudo: unable to resolve host thinkmore: Name or service not known
++++ for m in $(sudo mount | grep $mount_path | awk -F " on " '{print $2}' | awk '{print $1}' | sort -r)
++++ echo_green 'Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/dev...'
++++ echo -e -n '\e[92m'
+[92m+++ echo Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/dev...
+Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/dev...
++++ echo -e -n '\e[0m'
+[0m+++ sudo umount /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/dev
+sudo: unable to resolve host thinkmore: Name or service not known
++++ for m in $(sudo mount | grep $mount_path | awk -F " on " '{print $2}' | awk '{print $1}' | sort -r)
++++ echo_green 'Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/boot...'
++++ echo -e -n '\e[92m'
+[92m+++ echo Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/boot...
+Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/boot...
++++ echo -e -n '\e[0m'
+[0m+++ sudo umount /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount/boot
+sudo: unable to resolve host thinkmore: Name or service not known
++++ for m in $(sudo mount | grep $mount_path | awk -F " on " '{print $2}' | awk '{print $1}' | sort -r)
++++ echo_green 'Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount...'
++++ echo -e -n '\e[92m'
+[92m+++ echo Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount...
+Unmounting /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount...
++++ echo -e -n '\e[0m'
+[0m+++ sudo umount /home/omer/Documents/CustomPiOS/PhotoPrismPi/src/workspace/mount
+sudo: unable to resolve host thinkmore: Name or service not known
++++ chmod 644 ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ '[' -n 200 ']'
++++ minimize_ext ubuntu-24.04.2-preinstalled-server-arm64+raspi.img 2 200
++++ image=ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ partition=2
++++ buffer=200
++++ echo_green 'Resizing partition 2 on ubuntu-24.04.2-preinstalled-server-arm64+raspi.img to minimal size + 200 MB'
++++ echo -e -n '\e[92m'
+[92m+++ echo Resizing partition 2 on ubuntu-24.04.2-preinstalled-server-arm64+raspi.img to minimal size + 200 MB
+Resizing partition 2 on ubuntu-24.04.2-preinstalled-server-arm64+raspi.img to minimal size + 200 MB
++++ echo -e -n '\e[0m'
+[0m++++ sfdisk --json ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ fdisk_output='{
+   "partitiontable": {
+      "label": "dos",
+      "id": "0xfac95764",
+      "device": "ubuntu-24.04.2-preinstalled-server-arm64+raspi.img",
+      "unit": "sectors",
+      "sectorsize": 512,
+      "partitions": [
+         {
+            "node": "ubuntu-24.04.2-preinstalled-server-arm64+raspi.img1",
+            "start": 2048,
+            "size": 1048576,
+            "type": "c",
+            "bootable": true
+         },{
+            "node": "ubuntu-24.04.2-preinstalled-server-arm64+raspi.img2",
+            "start": 1050624,
+            "size": 7067925,
+            "type": "83"
+         }
+      ]
+   }
+}'
+++++ jq '.partitiontable.partitions[] | select(.node == "ubuntu-24.04.2-preinstalled-server-arm64+raspi.img2").start'
++++ start=1050624
+++++ jq '.partitiontable.partitions[] | select(.node == "ubuntu-24.04.2-preinstalled-server-arm64+raspi.img2").size'
++++ e2fsize_blocks=7067925
++++ offset=537919488
++++ detach_all_loopback ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ image_name=ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
+++++ losetup
+++++ grep ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
+++++ awk '{ print $1 }'
++++ for img in $(losetup | grep $1 | awk '{ print $1 }')
+++++ printf %s /dev/loop19
+++++ sed s/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img//g
++++ '[' /dev/loop19 '!=' /dev/loop19 ']'
++++ for img in $(losetup | grep $1 | awk '{ print $1 }')
+++++ printf %s /dev/loop21
+++++ sed s/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img//g
++++ '[' /dev/loop21 '!=' /dev/loop21 ']'
++++ for img in $(losetup | grep $1 | awk '{ print $1 }')
+++++ printf %s /dev/loop18
+++++ sed s/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img//g
++++ '[' /dev/loop18 '!=' /dev/loop18 ']'
++++ for img in $(losetup | grep $1 | awk '{ print $1 }')
+++++ printf %s /dev/loop20
+++++ sed s/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img//g
++++ '[' /dev/loop20 '!=' /dev/loop20 ']'
++++ test_for_image ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ '[' '!' -f ubuntu-24.04.2-preinstalled-server-arm64+raspi.img ']'
+++++ losetup -f --show -o 537919488 ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ LODEV=/dev/loop22
++++ trap 'losetup -d $LODEV' EXIT
++++ file -Ls /dev/loop22
++++ grep -qi ext
++++ e2fsck -fy /dev/loop22
+e2fsck 1.47.0 (5-Feb-2023)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+writable: 61377/216432 files (0.1% non-contiguous), 684185/883490 blocks
++++ resize2fs -p /dev/loop22
+resize2fs 1.47.0 (5-Feb-2023)
+The filesystem is already 883490 (4k) blocks long.  Nothing to do!
+
+++++ tune2fs -l /dev/loop22
+++++ grep -i 'block size'
+++++ awk -F: '{print $2-0}'
++++ e2fblocksize=4096
+++++ resize2fs -P /dev/loop22
+++++ grep -i 'minimum size'
+++++ awk -F: '{print $2-0}'
++++ e2fminsize=883490
++++ e2fminsize_bytes=3618775040
++++ e2ftarget_bytes=3828490240
++++ e2fsize_bytes=3618777088
++++ e2fminsize_mb=3451
++++ e2fminsize_blocks=7067921
++++ e2ftarget_mb=3651
++++ e2ftarget_blocks=7477521
++++ e2fsize_mb=3451
++++ size_offset_mb=-200
++++ echo_green 'Actual size is 3451 MB (7067925 blocks), Minimum size is 3451 MB (883490 file system blocks, 7067921 blocks)'
++++ echo -e -n '\e[92m'
+[92m+++ echo Actual size is 3451 MB '(7067925' 'blocks),' Minimum size is 3451 MB '(883490' file system blocks, 7067921 'blocks)'
+Actual size is 3451 MB (7067925 blocks), Minimum size is 3451 MB (883490 file system blocks, 7067921 blocks)
++++ echo -e -n '\e[0m'
+[0m+++ echo_green 'Resizing to 3651 MB (7477521 blocks)'
++++ echo -e -n '\e[92m'
+[92m+++ echo Resizing to 3651 MB '(7477521' 'blocks)'
+Resizing to 3651 MB (7477521 blocks)
++++ echo -e -n '\e[0m'
+[0m+++ '[' -200 -gt 0 ']'
++++ '[' -200 -lt 0 ']'
++++ echo_green 'Partition size is lower then the desired size, enlarging'
++++ echo -e -n '\e[92m'
+[92m+++ echo Partition size is lower then the desired size, enlarging
+Partition size is lower then the desired size, enlarging
++++ echo -e -n '\e[0m'
+[0m+++ enlarge_ext ubuntu-24.04.2-preinstalled-server-arm64+raspi.img 2 201
++++ image=ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ partition=2
++++ size=201
++++ echo_green 'Adding 201 MB to partition 2 of ubuntu-24.04.2-preinstalled-server-arm64+raspi.img'
++++ echo -e -n '\e[92m'
+[92m+++ echo Adding 201 MB to partition 2 of ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
+Adding 201 MB to partition 2 of ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ echo -e -n '\e[0m'
+[0m++++ sfdisk --json ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
+++++ jq '.partitiontable.partitions[] | select(.node ==  "ubuntu-24.04.2-preinstalled-server-arm64+raspi.img2").start'
++++ start=1050624
++++ offset=537919488
++++ dd if=/dev/zero bs=1M count=201
+201+0 records in
+201+0 records out
+210763776 bytes (211 MB, 201 MiB) copied, 0.322833 s, 653 MB/s
++++ fdisk ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
+
+Welcome to fdisk (util-linux 2.39.3).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+Command (m for help): Disk ubuntu-24.04.2-preinstalled-server-arm64+raspi.img: 4.07 GiB, 4367460864 bytes, 8530197 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xfac95764
+
+Device                                              Boot   Start     End Sectors  Size Id Type
+ubuntu-24.04.2-preinstalled-server-arm64+raspi.img1 *       2048 1050623 1048576  512M  c W95 FAT32 (LBA)
+ubuntu-24.04.2-preinstalled-server-arm64+raspi.img2      1050624 8118548 7067925  3.4G 83 Linux
+
+Command (m for help): Partition number (1,2, default 2): 
+Partition 2 has been deleted.
+
+Command (m for help): Partition type
+   p   primary (1 primary, 0 extended, 3 free)
+   e   extended (container for logical partitions)
+Select (default p): Partition number (2-4, default 2): First sector (1050624-8530196, default 1050624): Last sector, +/-sectors or +/-size{K,M,G,T,P} (1050624-8530196, default 8530196): 
+Created a new partition 2 of type 'Linux' and of size 3.6 GiB.
+Partition #2 contains a ext4 signature.
+
+Command (m for help): 
+Disk ubuntu-24.04.2-preinstalled-server-arm64+raspi.img: 4.07 GiB, 4367460864 bytes, 8530197 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xfac95764
+
+Device                                              Boot   Start     End Sectors  Size Id Type
+ubuntu-24.04.2-preinstalled-server-arm64+raspi.img1 *       2048 1050623 1048576  512M  c W95 FAT32 (LBA)
+ubuntu-24.04.2-preinstalled-server-arm64+raspi.img2      1050624 8530196 7479573  3.6G 83 Linux
+
+Command (m for help): The partition table has been altered.
+Syncing disks.
+
++++ detach_all_loopback ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ image_name=ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
+++++ losetup
+++++ grep ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
+++++ awk '{ print $1 }'
++++ for img in $(losetup | grep $1 | awk '{ print $1 }')
+++++ printf %s /dev/loop19
+++++ sed s/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img//g
++++ '[' /dev/loop19 '!=' /dev/loop19 ']'
++++ for img in $(losetup | grep $1 | awk '{ print $1 }')
+++++ printf %s /dev/loop21
+++++ sed s/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img//g
++++ '[' /dev/loop21 '!=' /dev/loop21 ']'
++++ for img in $(losetup | grep $1 | awk '{ print $1 }')
+++++ printf %s /dev/loop18
+++++ sed s/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img//g
++++ '[' /dev/loop18 '!=' /dev/loop18 ']'
++++ for img in $(losetup | grep $1 | awk '{ print $1 }')
+++++ printf %s /dev/loop22
+++++ sed s/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img//g
++++ '[' /dev/loop22 '!=' /dev/loop22 ']'
++++ for img in $(losetup | grep $1 | awk '{ print $1 }')
+++++ printf %s /dev/loop20
+++++ sed s/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img//g
++++ '[' /dev/loop20 '!=' /dev/loop20 ']'
++++ test_for_image ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ '[' '!' -f ubuntu-24.04.2-preinstalled-server-arm64+raspi.img ']'
+++++ losetup -f --show -o 537919488 ubuntu-24.04.2-preinstalled-server-arm64+raspi.img
++++ LODEV=/dev/loop23
++++ trap 'losetup -d $LODEV' EXIT
++++ file -Ls /dev/loop23
++++ grep -qi ext
++++ e2fsck -fy /dev/loop23
+e2fsck 1.47.0 (5-Feb-2023)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+writable: 61377/216432 files (0.1% non-contiguous), 684185/883490 blocks
++++ resize2fs -p /dev/loop23
+resize2fs 1.47.0 (5-Feb-2023)
+Resizing the filesystem on /dev/loop23 to 934946 (4k) blocks.
+The filesystem on /dev/loop23 is now 934946 (4k) blocks long.
+
++++ losetup -d /dev/loop23
++++ trap - EXIT
++++ echo_green 'Resized partition 2 of ubuntu-24.04.2-preinstalled-server-arm64+raspi.img to +201 MB'
++++ echo -e -n '\e[92m'
+[92m+++ echo Resized partition 2 of ubuntu-24.04.2-preinstalled-server-arm64+raspi.img to +201 MB
+Resized partition 2 of ubuntu-24.04.2-preinstalled-server-arm64+raspi.img to +201 MB
++++ echo -e -n '\e[0m'
+[0m+++ popd
+/home/omer/Documents/CustomPiOS/PhotoPrismPi/src
+++++ date
++++ echo_green -e '\nBUILD SUCCEEDED @ Mon Mar 10 22:20:29 CET 2025!\n'
++++ echo -e -n '\e[92m'
+[92m+++ echo -e '\nBUILD' SUCCEEDED @ Mon Mar 10 22:20:29 CET '2025!\n'
+
+BUILD SUCCEEDED @ Mon Mar 10 22:20:29 CET 2025!
+
++++ echo -e -n '\e[0m'
+[0m

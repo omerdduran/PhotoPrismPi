@@ -1,0 +1,22 @@
+export DIST_NAME=PhotoPrismPi
+export DIST_VERSION=0.1.0
+
+# rpi-imager json generator settings
+export RPI_IMAGER_NAME="${DIST_NAME}"
+export RPI_IMAGER_DESCRIPTION="PhotoPrism for Raspberry Pi 5 with Ubuntu 24.04"
+export RPI_IMAGER_WEBSITE="https://github.com/photoprism/photoprism"
+export RPI_IMAGER_ICON="https://raw.githubusercontent.com/guysoft/CustomPiOS/devel/media/rpi-imager-CustomPiOS.png"
+
+# Use Ubuntu 24.04.2 ARM64 image
+export BASE_DISTRO="ubuntu"
+export BASE_ARCH="arm64"
+export BASE_BOARD="raspberrypiarm64"
+export BASE_IMAGE_PATH="/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image"
+export BASE_ZIP_IMG="/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/image/ubuntu-24.04.2-preinstalled-server-arm64+raspi.img.xz"
+export BASE_IMAGE_RASPBIAN="no"
+export BASE_USER="ubuntu"
+export BASE_USER_PASSWORD="ubuntu"
+export BASE_BOOT_MOUNT_PATH="boot"
+
+export MODULES="base(network,docker,photoprismpi)"
+

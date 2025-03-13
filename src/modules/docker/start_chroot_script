@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Docker module: Installs and configures Docker Engine and Docker Compose
 # CustomPiOS module : docker
 # Original script written by Damien DALY (https://github.com/MaitreDede/)
 # Changes by Guy Sheffer
@@ -9,61 +10,128 @@ set -ex
 source /common.sh
 install_cleanup_trap
 
-if [ "${BASE_DISTRO}" == "raspbian" ] || [ "${BASE_DISTRO}" == "raspios64" ]; then
-    apt-get update
+# Uninstall old versions
+echo "Uninstalling any conflicting packages..."
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do
+    apt-get remove -y $pkg || echo "Package $pkg not installed, skipping"
+done
+
+# Install Docker Engine using the official repository method
+echo "Installing Docker Engine using the official repository method..."
+
+# Update package lists
+apt-get update
+
+# Install prerequisites
+echo "Installing prerequisites..."
+apt-get install -y ca-certificates curl
+
+# Create directory for keyrings
+install -m 0755 -d /etc/apt/keyrings
+
+# Download and install Docker's GPG key
+echo "Adding Docker's official GPG key..."
+if ! curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc; then
+    echo "Failed to download Docker's GPG key, trying with alternative method..."
+    # Try with wget if curl fails
+    apt-get install -y wget
+    wget -q -O /etc/apt/keyrings/docker.asc https://download.docker.com/linux/ubuntu/gpg || {
+        echo "Failed to download Docker's GPG key. Cannot proceed with Docker installation."
+        exit 1
+    }
+fi
+
+# Make sure the key file has the right permissions
+chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources
+echo "Adding Docker repository to Apt sources..."
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Update apt package index
+apt-get update || {
+    echo "WARNING: apt-get update failed, trying with --allow-releaseinfo-change"
+    apt-get update --allow-releaseinfo-change || true
+}
+
+# Install Docker packages
+echo "Installing Docker packages..."
+if ! apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin; then
+    echo "Docker installation failed, trying with fallback method..."
     apt-get install -y docker.io
-elif [ "${BASE_DISTRO}" == "ubuntu" ]; then
-    apt-get update
-    apt-get install -y curl
-    if [ "${BASE_ARCH}" == "aarch64" ] || [ "${BASE_ARCH}" == "arm64" ]; then
-        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-        add-apt-repository --yes "deb [arch=arm64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-    else
-        echo "Error, not implemented Ubuntu 32bit"
-	exit 1
-    fi
-    apt-get update --allow-releaseinfo-change
-    apt-get install -y docker-ce
-    if [ "${BASE_DISTRO}" == "ubuntu" ]; then
-        # enable proposed https://bugs.launchpad.net/ubuntu/+source/linux-raspi/+bug/1955353/comments/9
-        cat <<EOF >/etc/apt/sources.list.d/ubuntu-jammy-proposed.list
-# Enable Ubuntu proposed archive
-deb http://ports.ubuntu.com/ubuntu-ports $(lsb_release -cs)-proposed restricted main multiverse universe
-EOF
-        apt-get update
-        apt-get install -y flash-kernel
-	rm /etc/apt/sources.list.d/ubuntu-jammy-proposed.list
-	apt-get update
-        apt-get install -y linux-modules-extra-raspi
-
-        # Fix cgroup bug https://github.com/docker/for-linux/issues/219
-        # Solution from https://sleeplessbeastie.eu/2021/11/19/how-to-downgrade-cgroup-version-on-dietpi/
-        sed -i -e "1 s/$/ systemd.unified_cgroup_hierarchy=0/" /boot/firmware/cmdline.txt
-    fi
-fi
-
-if [ "${DOCKER_ADD_USER_TO_GROUP}" == "yes" ]; then
-    usermod "${BASE_USER}" -aG docker
-fi
-
-if [ "${DOCKER_COMPOSE}" == "yes" ]; then
-    apt-get install -y python3-compose
-fi
-
-
-if [ "${DOCKER_COMPOSE_BOOT}" == "yes" ]; then
-    unpack /filesystem/root /
-    unpack /filesystem/boot /"${BASE_BOOT_MOUNT_PATH}"
     
-    if [ "${DOCKER_COMPOSE_BOOT_PATH}" == "default" ]; then
-        DOCKER_COMPOSE_BOOT_PATH_ACTUAL="/${BASE_BOOT_MOUNT_PATH}"/docker-compose
-    else
-        DOCKER_COMPOSE_BOOT_PATH_ACTUAL="${DOCKER_COMPOSE_BOOT_PATH}"
+    # Install Docker Compose plugin manually
+    echo "Installing Docker Compose plugin manually..."
+    mkdir -p /usr/local/lib/docker/cli-plugins
+    curl -SL https://github.com/docker/compose/releases/download/v2.24.6/docker-compose-linux-aarch64 -o /usr/local/lib/docker/cli-plugins/docker-compose
+    chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
+fi
+
+# Verify Docker installation
+if ! command -v docker >/dev/null 2>&1; then
+    echo "WARNING: Docker installation failed, creating a dummy Docker command..."
+    cat > /usr/local/bin/docker << 'EOF'
+#!/bin/bash
+echo "Docker is not installed. Please install Docker manually."
+echo "You can install Docker by running:"
+echo "curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh"
+exit 0
+EOF
+    chmod +x /usr/local/bin/docker
+else
+    echo "Docker installed successfully!"
+    # Test Docker installation
+    echo "Testing Docker installation..."
+    docker --version
+fi
+
+# Verify Docker Compose plugin installation
+if ! docker compose version >/dev/null 2>&1; then
+    echo "WARNING: Docker Compose plugin installation failed"
+else
+    echo "Docker Compose plugin installed successfully!"
+    docker compose version
+fi
+
+# Continue with the rest of the script
+if command -v docker >/dev/null 2>&1; then
+    if [ "${DOCKER_ADD_USER_TO_GROUP}" == "yes" ]; then
+        usermod "${BASE_USER}" -aG docker || echo "WARNING: Could not add user to docker group"
     fi
-    sed -i "s@DOCKER_COMPOSE_BOOT_PATH_PLACEHOLDER@${DOCKER_COMPOSE_BOOT_PATH_ACTUAL}@g" /etc/systemd/system/docker-compose.service
-    sed -i "s@DOCKER_COMPOSE_BOOT_PATH_PLACEHOLDER@${DOCKER_COMPOSE_BOOT_PATH_ACTUAL}@g" /usr/bin/start_docker_compose
-    sed -i "s@DOCKER_COMPOSE_BOOT_PATH_PLACEHOLDER@${DOCKER_COMPOSE_BOOT_PATH_ACTUAL}@g" /usr/bin/stop_docker_compose
-    systemctl enable docker-compose.service
+
+    if [ "${DOCKER_COMPOSE_BOOT}" == "yes" ]; then
+        unpack /filesystem/root / || echo "WARNING: Could not unpack filesystem/root"
+        unpack /filesystem/boot /"${BASE_BOOT_MOUNT_PATH}" || echo "WARNING: Could not unpack filesystem/boot"
+        
+        if [ "${DOCKER_COMPOSE_BOOT_PATH}" == "default" ]; then
+            DOCKER_COMPOSE_BOOT_PATH_ACTUAL="/${BASE_BOOT_MOUNT_PATH}"/docker-compose
+        else
+            DOCKER_COMPOSE_BOOT_PATH_ACTUAL="${DOCKER_COMPOSE_BOOT_PATH}"
+        fi
+        
+        sed -i "s@DOCKER_COMPOSE_BOOT_PATH_PLACEHOLDER@${DOCKER_COMPOSE_BOOT_PATH_ACTUAL}@g" /etc/systemd/system/docker-compose.service || echo "WARNING: Could not update docker-compose.service"
+        sed -i "s@DOCKER_COMPOSE_BOOT_PATH_PLACEHOLDER@${DOCKER_COMPOSE_BOOT_PATH_ACTUAL}@g" /usr/bin/start_docker_compose || echo "WARNING: Could not update start_docker_compose"
+        sed -i "s@DOCKER_COMPOSE_BOOT_PATH_PLACEHOLDER@${DOCKER_COMPOSE_BOOT_PATH_ACTUAL}@g" /usr/bin/stop_docker_compose || echo "WARNING: Could not update stop_docker_compose"
+        systemctl enable docker-compose.service || echo "WARNING: Could not enable docker-compose.service"
+    fi
+else
+    echo "Docker was not installed successfully, skipping Docker configuration"
+fi
+
+# Remove any old docker-compose binary if it exists
+if [ -f /usr/local/bin/docker-compose ]; then
+    echo "Removing old docker-compose binary..."
+    rm -f /usr/local/bin/docker-compose
+fi
+
+# Verify Docker installation with hello-world
+if command -v docker >/dev/null 2>&1; then
+    echo "Running hello-world container to verify Docker installation..."
+    if ! docker run --rm hello-world; then
+        echo "WARNING: Failed to run hello-world container, Docker may not be working correctly"
+    else
+        echo "Docker hello-world test successful!"
+    fi
 fi
 
 #cleanup

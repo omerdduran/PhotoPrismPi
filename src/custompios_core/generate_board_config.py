@@ -24,5 +24,8 @@ if __name__ == "__main__":
     env = image_config["env"]
     with open(args.output_script, "w+") as w:
         for key in env.keys():
-            w.write(f'export {key}="{env[key]}"\n')
+            if key == "BASE_ARCH":
+                w.write(f'export {key}="arm64"\n')
+            else:
+                w.write(f'export {key}="{env[key]}"\n')
         

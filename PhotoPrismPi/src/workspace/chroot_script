@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -x
+set -e
+# Defined execution order: [('base', 'start'), ('network', 'start'), ('network', 'end'), ('docker', 'start'), ('docker', 'end'), ('photoprismpi', 'start'), ('photoprismpi', 'end'), ('base', 'end')]
+# With meta modules order: [('base', 'start'), ('network', 'start'), ('network', 'end'), ('docker', 'start'), ('docker', 'end'), ('photoprismpi', 'start'), ('photoprismpi', 'end'), ('base', 'end')]
+# start_base
+execute_chroot_script '/home/omer/Documents/CustomPiOS/src/modules/base' '/home/omer/Documents/CustomPiOS/src/modules/base/start_chroot_script'
+# start_network
+execute_chroot_script '/home/omer/Documents/CustomPiOS/src/modules/network' '/home/omer/Documents/CustomPiOS/src/modules/network/start_chroot_script'
+# end_network
+# start_docker
+execute_chroot_script '/home/omer/Documents/CustomPiOS/src/modules/docker' '/home/omer/Documents/CustomPiOS/src/modules/docker/start_chroot_script'
+# end_docker
+# start_photoprismpi
+execute_chroot_script '/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi' '/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/start_chroot_script'
+# end_photoprismpi
+execute_chroot_script '/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi' '/home/omer/Documents/CustomPiOS/PhotoPrismPi/src/modules/photoprismpi/end_chroot_script'
+# end_base
+execute_chroot_script '/home/omer/Documents/CustomPiOS/src/modules/base' '/home/omer/Documents/CustomPiOS/src/modules/base/end_chroot_script'

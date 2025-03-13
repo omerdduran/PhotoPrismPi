@@ -1,0 +1,25 @@
+## Global Options ##
+{
+  admin off
+  https_port 443
+  auto_https disable_redirects
+  skip_install_trust
+  email caddy@photoprismpi.local
+}
+
+## Local HTTPS ##
+127.0.0.1,
+*.local,
+localhost,
+photoprism,
+photoprismpi,
+photoprism.local,
+*.photoprism.local,
+photoprismpi.local,
+*.photoprismpi.local {
+    tls internal {
+      on_demand
+    }
+
+    reverse_proxy photoprism:2342
+}
